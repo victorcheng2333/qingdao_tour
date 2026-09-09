@@ -1,0 +1,8 @@
+# Next.js app scaffold under site/ (not part of the static guide)
+site/node_modules/
+site/.next/
+site/.vinext/
+site/dist/
+site/.wrangler/
+site/.openai/
+.DS_Store

@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>日照 · 青岛 · 威海｜蔚来 ES6 六天自驾攻略（2026.9.24–10.1）</title>
+<meta name="description" content="安徽歙县出发，日照—青岛—威海 6 天自驾。夜间赶路路线（含蔚来换电站）、白天风景路线、景点图鉴与建议、携程酒店比较（含钻级）、可交互小工具。">
+<style>
+:root{
+  --bg:#f6f4ef;--card:#fff;--ink:#1e2530;--muted:#66717f;--line:#e5e0d6;
+  --sea:#0b6e99;--sea-soft:#e4f1f8;--night:#243052;--night-soft:#e9ecf4;--sun:#c96a08;--sun-soft:#fdf0dc;
+  --leaf:#1f8a70;--leaf-soft:#e2f4ee;--rose:#b6413f;--rose-soft:#fbe9e7;--shadow:0 1px 2px rgba(20,30,40,.05),0 6px 20px rgba(20,30,40,.06);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12161d;--card:#1a2029;--ink:#e9edf2;--muted:#a3adba;--line:#2c3542;
+  --sea:#63bce2;--sea-soft:#15303d;--night:#c8d2ea;--night-soft:#242c40;--sun:#f0a743;--sun-soft:#3a2c14;
+  --leaf:#4ecba8;--leaf-soft:#17342c;--rose:#ef8b88;--rose-soft:#3d2221;--shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.3);
+}}
+:root[data-theme="dark"]{
+  --bg:#12161d;--card:#1a2029;--ink:#e9edf2;--muted:#a3adba;--line:#2c3542;
+  --sea:#63bce2;--sea-soft:#15303d;--night:#c8d2ea;--night-soft:#242c40;--sun:#f0a743;--sun-soft:#3a2c14;
+  --leaf:#4ecba8;--leaf-soft:#17342c;--rose:#ef8b88;--rose-soft:#3d2221;--shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:60px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--sea)}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+h2{font-size:1.55rem}
+h3{font-size:1.12rem;margin-top:1.3em}
+h4{font-size:1rem;margin-top:.9em}
+p{margin:.35em 0 .8em}
+ul{padding-left:1.2em;margin:.3em 0 .8em}
+li{margin:.2em 0}
+small,.muted{color:var(--muted)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* nav */
+nav.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--card) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;gap:2px;overflow-x:auto;padding:8px 20px;white-space:nowrap;scrollbar-width:none}
+nav.top a{padding:6px 11px;border-radius:999px;text-decoration:none;color:var(--ink);font-size:.9rem}
+nav.top a:hover{background:var(--sea-soft)}
+/* hero */
+header.hero{padding:44px 0 26px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,var(--sea-soft),transparent 70%)}
+header.hero h1{font-size:clamp(1.6rem,3.6vw,2.3rem)}
+header.hero .lead{font-size:1.04rem;max-width:720px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chip{display:inline-block;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:.82rem;line-height:1.5;white-space:nowrap}
+.chip.night{background:var(--night-soft);color:var(--night);border-color:transparent}
+.chip.scenic{background:var(--leaf-soft);color:var(--leaf);border-color:transparent}
+.chip.sun{background:var(--sun-soft);color:var(--sun);border-color:transparent}
+.chip.rose{background:var(--rose-soft);color:var(--rose);border-color:transparent}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:14px 0}
+.stat div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.stat b{display:block;font-size:1.3rem;color:var(--sea);line-height:1.3}
+.keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:16px 0 0}
+.keys div{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--sea);border-radius:10px;padding:12px 14px;font-size:.93rem}
+.keys b{display:block;margin-bottom:2px}
+/* layout */
+section{padding:34px 0;border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:16px}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.grid.tools{grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr))}
+#planTable{min-width:0;font-size:.85rem}#planTable td,#planTable th{padding:6px 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.card.night{border-top:4px solid var(--night)}
+.card.scenic{border-top:4px solid var(--leaf)}
+.card.sun{border-top:4px solid var(--sun)}
+.card.rose{border-top:4px solid var(--rose)}
+.card h3{margin-top:0}
+.card h3 .chip{display:block;width:max-content;margin-top:6px;font-weight:500}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:.93rem;align-items:start}
+.kv b{color:var(--muted);font-weight:500;white-space:nowrap}
+/* tables */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:12px 0;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:560px}
+th,td{padding:9px 11px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{background:var(--sea-soft);font-weight:600}
+/* timeline */
+.timeline{border-left:2px solid var(--line);margin:8px 0 0 7px;padding-left:16px}
+.tl{position:relative;padding:2px 0 12px}
+.tl::before{content:"";position:absolute;left:-22px;top:9px;width:10px;height:10px;border-radius:50%;background:var(--sea);border:2px solid var(--card)}
+.tl.night::before{background:var(--night)}
+.tl.scenic::before{background:var(--leaf)}
+.tl.sun::before{background:var(--sun)}
+.tl .t{font-weight:600;font-variant-numeric:tabular-nums;font-size:.93rem}
+.tl .d{color:var(--muted);font-size:.9rem;line-height:1.55}
+/* route strip */
+.strip{display:flex;align-items:stretch;gap:0;overflow-x:auto;padding:6px 2px 10px;scrollbar-width:thin}
+.strip .node{flex:0 0 auto;min-width:118px;text-align:center;padding:8px 6px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+.strip .node b{display:block;font-size:.92rem}
+.strip .node small{display:block;color:var(--muted);line-height:1.35;font-size:.78rem}
+.strip .node.swap{border-color:var(--night);background:var(--night-soft)}
+.strip .node.stay{border-color:var(--sea);background:var(--sea-soft)}
+.strip .node.view{border-color:var(--leaf);background:var(--leaf-soft)}
+.strip .leg{flex:0 0 auto;width:92px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-size:.74rem;color:var(--muted);text-align:center;line-height:1.3}
+.strip .leg::before{content:"";width:100%;height:0;border-top:3px dashed var(--night);margin-bottom:4px}
+.strip .leg.s::before{border-top:3px solid var(--leaf)}
+/* buttons */
+.btn{display:inline-block;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-size:.85rem;cursor:pointer;line-height:1.5}
+.btn.primary{background:var(--sea);color:#fff;border-color:var(--sea)}
+.btn:hover{filter:brightness(.96)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+.callout{border-radius:12px;padding:13px 16px;margin:14px 0;border:1px solid var(--line);background:var(--sun-soft);font-size:.95rem}
+.callout.sea{background:var(--sea-soft)}.callout.rose{background:var(--rose-soft)}.callout.leaf{background:var(--leaf-soft)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.tabs button{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:.9rem}
+.tabs button[aria-selected="true"]{background:var(--sea);color:#fff;border-color:var(--sea)}
+[hidden]{display:none!important}
+input[type=number],input[type=datetime-local],input[type=text],select{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+input[type=number]{width:92px}
+label.f{display:flex;align-items:center;gap:8px;margin:6px 0;flex-wrap:wrap;font-size:.92rem}
+.total{font-size:1.4rem;font-weight:700;color:var(--sea)}
+ul.check{list-style:none;padding:0;margin:0}
+ul.check li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-bottom:1px dashed var(--line)}
+ul.check li input{margin-top:5px}
+ul.check li.done span{text-decoration:line-through;color:var(--muted)}
+details{border:1px solid var(--line);border-radius:12px;padding:10px 16px;margin:10px 0;background:var(--card)}
+summary{cursor:pointer;font-weight:600}
+details[open] summary{margin-bottom:8px}
+footer{padding:26px 0 48px;color:var(--muted);font-size:.85rem}
+.src li{margin:4px 0;font-size:.9rem}
+.badge{display:inline-block;font-size:.74rem;padding:1px 7px;border-radius:6px;background:var(--line);margin-left:4px;vertical-align:middle;white-space:nowrap}
+.badge.ok{background:var(--leaf-soft);color:var(--leaf)}.badge.warn{background:var(--sun-soft);color:var(--sun)}.badge.bad{background:var(--rose-soft);color:var(--rose)}
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(250px,100%),1fr));gap:14px;margin:12px 0}
+img{max-width:100%}
+.poi{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.poi .ph{aspect-ratio:3/2;background:var(--sea-soft);overflow:hidden;position:relative}
+.poi .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.poi .ph{background:linear-gradient(135deg,var(--sea-soft),var(--leaf-soft))}
+.poi .ph .noimg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--sea);font-size:1.15rem;font-weight:600;opacity:.8;text-align:center;padding:12px}
+.poi .ph .noimg small{font-size:.75rem;font-weight:400;opacity:.8;margin-top:4px}
+.poi .body{padding:12px 14px 14px;font-size:.9rem;flex:1}
+.poi h4{margin:0 0 4px;font-size:1rem;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.poi .why{margin:4px 0 6px;color:var(--ink)}
+.poi .facts{color:var(--muted);font-size:.85rem;line-height:1.5}
+.poi .credit{font-size:.72rem;color:var(--muted);padding:0 14px 10px}
+.poi .credit a{color:var(--muted)}
+/* hotels */
+.hfilter{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0 12px;font-size:.9rem}
+.hlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
+.hotel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.9rem;position:relative;display:flex;flex-direction:column;gap:4px}
+.hotel.sel{border-color:var(--sea);box-shadow:0 0 0 2px var(--sea-soft)}
+.hotel .nm{font-weight:600;font-size:.98rem;padding-right:70px}
+.hotel .nm a{color:var(--ink);text-decoration:none}
+.hotel .nm a:hover{color:var(--sea)}
+.hotel .star{color:var(--sun);letter-spacing:1px;font-size:.85rem}
+.hotel .score{color:var(--muted)}
+.hotel .score b{color:var(--sea)}
+.hotel .price{font-size:1.15rem;font-weight:700;color:var(--sea);position:absolute;right:14px;top:12px;text-align:right;line-height:1.1}
+.hotel .price small{display:block;font-weight:400;color:var(--muted);font-size:.72rem}
+.hotel .meta{color:var(--muted);font-size:.85rem}
+.hotel label{margin-top:auto;display:flex;align-items:center;gap:6px;font-size:.85rem;padding-top:6px;border-top:1px dashed var(--line)}
+.hotel .pick{position:absolute;right:14px;top:44px}
+@media (max-width:640px){
+  .kv{grid-template-columns:1fr;gap:2px}.kv b{margin-top:6px}
+  .card{padding:14px 15px}
+  .strip .node{min-width:104px}
+  header.hero{padding:28px 0 20px}
+}
+@media print{nav.top,.btns,.btn,.hfilter{display:none}section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="页面导航"><div class="wrap">
+<a href="#top">总览</a><a href="#days">六天行程</a><a href="#routes">路线</a><a href="#power">换电</a><a href="#rizhao">日照</a><a href="#qingdao">青岛</a><a href="#weihai">威海·荣成</a><a href="#hotels">酒店</a><a href="#tools">小工具</a><a href="#risks">提示</a><a href="#sources">来源</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="chips"><span class="chip">9.24 周四 19:00 出发 → 10.1 凌晨到家</span><span class="chip">夫妻 2 人</span><span class="chip">蔚来 ES6 · 100 度电</span><span class="chip night">赶路走夜路</span><span class="chip scenic">风景路白天开</span></div>
+<h1>日照 · 青岛 · 威海<br>六天自驾：长路交给夜晚，白天留给海岸</h1>
+<p class="lead">歙县王村镇夜里出发，731 公里到日照睡到中午；日照玩半天赏中秋月，青岛两晚，海岸线开到威海再住三晚；9/30 中午返程，跨过 10/1 零点驶出高速，国庆免费。</p>
+<div class="stat">
+<div><b id="countdown">--</b><small>距出发</small></div>
+<div><b>≈2,560 km</b><small>总里程 · 4 段赶路 + 2 段风景路</small></div>
+<div><b>6 晚</b><small>酒店 9/24–9/29</small></div>
+<div><b>3 + 4 次</b><small>去程 / 回程换电（保守）</small></div>
+</div>
+<div class="keys">
+<div><b>日照半天就够，当晚去青岛</b>万平口、灯塔、阳光海岸相邻且免费；9/25 中秋 17:04 月出、17:55 日落同框，晚饭后 2 小时到青岛。</div>
+<div><b>去程走东线不进南京</b>G4012 → G2 → G25 → G15，731 km / 8 h / ¥382；换电在前宋、江都、日照服务区，江都必须换满。</div>
+<div><b>青岛→威海走海岸线，白天开</b>仰口 → 海阳 → 乳山银滩 → 威海约 295 km、5 小时，几乎免费；赶时间走 G1813，海阳服务区可换电。</div>
+<div><b>威海精华在环海路和荣成东线</b>猫头山辅路 10/7 前禁行，停半月湾换 20 元摆渡车；那香海、布鲁威斯号、成山头日出同一条线。</div>
+<div><b>9/30 中午出发，凌晨到家免费</b>1,113 km / 12 h，海阳、日照、江都、前宋四次换电；免费以驶出收费站时间为准。</div>
+</div>
+</div></header>
+
+<section id="days"><div class="wrap">
+<h2>六天行程</h2>
+<p class="muted">9/25（周五）–9/27（周日）中秋假期，高速不免费；10/1（周四）起国庆假期，7 座以下小客车免费。</p>
+<div class="grid three">
+<div class="card night"><h3>D0 · 9/24 周四<span class="chip night">夜间赶路 731 km</span></h3><div class="timeline">
+<div class="tl night"><div class="t">19:00</div><div class="d">王村镇满电出发，G56 → G4012 溧宁</div></div>
+<div class="tl night"><div class="t">≈21:45</div><div class="d">前宋服务区换电①</div></div>
+<div class="tl night"><div class="t">≈23:40</div><div class="d">江都服务区换满②，之后 345 km 没有高速换电站</div></div>
+<div class="tl night"><div class="t">≈03:10</div><div class="d">日照服务区换电③（岚山区）</div></div>
+<div class="tl night"><div class="t">≈03:50</div><div class="d">到万平口酒店，订的是 9/24 晚的房，睡到中午</div></div>
+</div></div>
+<div class="card sun"><h3>D1 · 9/25 周五 中秋<span class="chip sun">日照半天 → 夜里去青岛</span></h3><div class="timeline">
+<div class="tl sun"><div class="t">11:00</div><div class="d">起床、退房，巧克力渔家午餐</div></div>
+<div class="tl"><div class="t">13:30</div><div class="d">万平口 3 号门 → 沙滩走到 5 号门太公岛</div></div>
+<div class="tl"><div class="t">15:30</div><div class="d">阳光海岸绿道骑行，或直接去灯塔</div></div>
+<div class="tl sun"><div class="t">17:04 / 17:55</div><div class="d">灯塔广场：月出、落日、灯塔亮灯</div></div>
+<div class="tl"><div class="t">18:30</div><div class="d">东夷小镇夜市晚餐赏月</div></div>
+<div class="tl night"><div class="t">20:30 → 22:40</div><div class="d">G15 → 胶州湾大桥 → 青岛崂山区酒店</div></div>
+</div></div>
+<div class="card scenic"><h3>D2 · 9/26 周六<span class="chip scenic">青岛老城 · 地铁不开车</span></h3><div class="timeline">
+<div class="tl"><div class="t">06:30</div><div class="d">栈桥、中山路、天主教堂，趁人少</div></div>
+<div class="tl"><div class="t">09:30</div><div class="d">大学路 → 信号山 → 小鱼山</div></div>
+<div class="tl"><div class="t">11:30</div><div class="d">八大关、第二海水浴场，春和楼午餐</div></div>
+<div class="tl"><div class="t">15:00</div><div class="d">五四广场、奥帆中心，黄昏去小麦岛</div></div>
+<div class="tl sun"><div class="t">18:30</div><div class="d">浮山湾灯光秀（情人坝）</div></div>
+<div class="tl"><div class="t">19:30</div><div class="d">台东营口路啤酒屋</div></div>
+</div></div>
+<div class="card scenic"><h3>D3 · 9/27 周日<span class="chip scenic">崂山仰口 → 海岸线到威海</span></h3><div class="timeline">
+<div class="tl"><div class="t">07:30</div><div class="d">崂山仰口停车场（环海公路名额 9/22 08:00 抢）</div></div>
+<div class="tl"><div class="t">08:00–11:30</div><div class="d">仰口索道、觅天洞；有预约则开到雕龙嘴、青山渔村</div></div>
+<div class="tl"><div class="t">12:00</div><div class="d">王哥庄大馒头，出发</div></div>
+<div class="tl scenic"><div class="t">13:00–16:00</div><div class="d">鳌山湾 → G228 → 海阳万米海滩</div></div>
+<div class="tl sun"><div class="t">16:30–17:50</div><div class="d">乳山银滩大拇指广场看日落</div></div>
+<div class="tl"><div class="t">19:30</div><div class="d">威海国际海水浴场酒店</div></div>
+</div></div>
+<div class="card scenic"><h3>D4 · 9/28 周一<span class="chip scenic">环海路 → 荣成东线</span></h3><div class="timeline">
+<div class="tl"><div class="t">07:30</div><div class="d">火炬八街 20 分钟，国际海水浴场散步</div></div>
+<div class="tl scenic"><div class="t">09:00</div><div class="d">半月湾北岸停车场 → 摆渡车猫头山 2/3/13 号观景台</div></div>
+<div class="tl"><div class="t">12:00</div><div class="d">海源公园、三连岛；韩乐坊或小石岛午餐</div></div>
+<div class="tl scenic"><div class="t">14:30</div><div class="d">东行：孤独公约 → 那香海钻石沙滩</div></div>
+<div class="tl sun"><div class="t">16:30</div><div class="d">布鲁威斯号，傍晚光线软、人少</div></div>
+<div class="tl"><div class="t">18:00</div><div class="d">宿那香海 / 成山头一带</div></div>
+</div></div>
+<div class="card sun"><h3>D5 · 9/29 周二<span class="chip sun">成山头日出 → 市区</span></h3><div class="timeline">
+<div class="tl sun"><div class="t">04:45</div><div class="d">成山头入园，05:43 天尽头看日出</div></div>
+<div class="tl scenic"><div class="t">08:30</div><div class="d">音乐公路 → 烟墩角海草房 → 青鱼滩彩虹公路；可选鸡鸣岛</div></div>
+<div class="tl"><div class="t">13:00</div><div class="d">回市区：刘公岛（出岛末班 17:30）或幸福门、大相框</div></div>
+<div class="tl"><div class="t">18:30</div><div class="d">北方饺子王 / 韩信烤肉</div></div>
+<div class="tl"><div class="t">夜</div><div class="d">宿威海市区，方便 9/30 上 G18</div></div>
+</div></div>
+<div class="card night"><h3>D6 · 9/30 周三<span class="chip night">返程夜路 1,113 km</span></h3><div class="timeline">
+<div class="tl"><div class="t">09:00</div><div class="d">早市、环翠楼，退房</div></div>
+<div class="tl night"><div class="t">12:00</div><div class="d">出发 G18 → G1813</div></div>
+<div class="tl night"><div class="t">≈13:30</div><div class="d">海阳服务区换电①</div></div>
+<div class="tl night"><div class="t">≈17:00</div><div class="d">日照服务区换电②，晚餐</div></div>
+<div class="tl night"><div class="t">≈21:30</div><div class="d">江都服务区换电③（排队则 20 km 后郭村）</div></div>
+<div class="tl night"><div class="t">≈23:40</div><div class="d">前宋服务区换电④</div></div>
+<div class="tl sun"><div class="t">10/1 ≈01:30</div><div class="d">零点后驶出歙县收费站，全程免费</div></div>
+</div></div>
+</div>
+<div class="callout"><b>想在日照多留一晚（方案 B）：</b>9/25 住万平口第二晚，9/26 05:52 灯塔看日出、09:30–12:00 太公岛赶海（低潮 11:52），12:30 出发 14:30 到青岛。代价是青岛少半天、周六 G15 更堵、中秋夜海景房贵且紧张。</div>
+</div></section>
+
+<section id="routes"><div class="wrap">
+<h2>路线：夜间赶路 / 白天风景</h2>
+<p class="muted">数据来自 2026-09-09 高德查询（起点王村镇人民政府），假期实际用时以当天导航为准。每段附高德一键导航。</p>
+
+<h3>全程节点图</h3>
+<div class="strip">
+<div class="node stay"><b>歙县 · 王村镇</b><small>9/24 19:00 出发</small></div>
+<div class="leg">240 km · 2.7 h<br>G56 → G4012</div>
+<div class="node swap"><b>前宋服务区</b><small>换电① · G4012 溧阳</small></div>
+<div class="leg">150 km · 1.7 h<br>G4011 → S28 → G2</div>
+<div class="node swap"><b>江都服务区</b><small>换电② 换满 · G2</small></div>
+<div class="leg">340 km · 3.6 h<br>G2 → G25 → G15<br>无高速换电站</div>
+<div class="node swap"><b>日照服务区</b><small>换电③ · G15 岚山</small></div>
+<div class="leg">35 km · 0.6 h</div>
+<div class="node stay"><b>日照 · 万平口</b><small>9/25 半天</small></div>
+<div class="leg">149 km · 2 h<br>G15 → 胶州湾大桥</div>
+<div class="node stay"><b>青岛 · 石老人</b><small>9/25–27 两晚</small></div>
+<div class="leg s">44 km · 1 h</div>
+<div class="node view"><b>崂山仰口</b><small>9/27 上午</small></div>
+<div class="leg s">88 km · 1.6 h<br>滨海公路</div>
+<div class="node view"><b>海阳万米海滩</b><small>停 40 分钟</small></div>
+<div class="leg s">66 km · 1 h</div>
+<div class="node view"><b>乳山银滩</b><small>看日落 17:49</small></div>
+<div class="leg s">97 km · 1.4 h</div>
+<div class="node stay"><b>威海 · 国际海水浴场</b><small>9/27 一晚</small></div>
+<div class="leg s">25 km 环海路</div>
+<div class="node view"><b>猫头山 · 半月湾</b><small>9/28 上午</small></div>
+<div class="leg s">50 km</div>
+<div class="node stay"><b>那香海 · 成山头</b><small>9/28 一晚 · 9/29 日出</small></div>
+<div class="leg s">62 km · 1.3 h</div>
+<div class="node stay"><b>威海市区</b><small>9/29 一晚 · 9/30 12:00 出发</small></div>
+<div class="leg">130 km · 1.5 h<br>G18 → G1813</div>
+<div class="node swap"><b>海阳服务区</b><small>换电① · G1813</small></div>
+<div class="leg">310 km · 3.4 h<br>G15</div>
+<div class="node swap"><b>日照服务区</b><small>换电② · 晚餐</small></div>
+<div class="leg">345 km · 3.8 h<br>G15 → G25 → G2</div>
+<div class="node swap"><b>江都服务区</b><small>换电③（备用郭村）</small></div>
+<div class="leg">150 km · 1.7 h</div>
+<div class="node swap"><b>前宋服务区</b><small>换电④</small></div>
+<div class="leg">240 km · 2.7 h</div>
+<div class="node stay"><b>歙县到家</b><small>10/1 ≈01:30 · 免费</small></div>
+</div>
+<p class="muted" style="margin-top:0">深色虚线：夜间高速；绿色实线：白天海岸线。横向可滑动。</p>
+
+<h3>夜间赶路</h3>
+<div class="grid two">
+<div class="card night"><h3>去程：歙县 → 日照<span class="chip night">9/24 19:00 · 731.6 km · 8 h 04 · ¥382</span></h3>
+<ul>
+<li><b>走向</b>：G56 杭瑞 → 佛岭隧道 → <b>G4012 溧宁</b>（绩溪、宁国、宣城、广德、溧阳，293 km）→ G4011 扬溧 → S28 启扬 → <b>G2 京沪</b>（扬州→淮安 144 km）→ <b>G25 长深</b>（淮安→连云港 86 km）→ <b>G15 沈海</b>（赣榆→日照 124 km）→ 迎宾路。</li>
+<li><b>换电</b>：前宋（溧阳方向）→ 江都（北京方向，换满）→ 日照服务区（沈阳方向）。</li>
+<li><b>备选</b>：G4211 宁芜 → 南京绕城 → G25 → G15，744 km / 8 h 18 / ¥338，穿南京都市圈、货车多，且这条线没找到高速换电站。</li>
+<li><b>夜路注意</b>：G4012 绩黄/宁绩段山区隧道多，限速 80/60；苏北 G25 淮安段、G15 连云港段秋季凌晨易起团雾；连云港、日照港区 G15 夜间货车密集。</li>
+<li><b>服务区</b>：深渡（歙县）· 前宋（溧阳）· 江都 · 六合/釜山 · 王兴/蒋庵（淮安）· 六塘/涟水/灌南 · 赣马（赣榆，进山东前加油上厕所）· 日照（岚山）。</li>
+</ul>
+<div class="btns"><a class="btn primary" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E6%AD%99%E5%8E%BF%E7%8E%8B%E6%9D%91%E9%95%87&from[lnglat]=118.399645,29.757614&to[name]=%E6%97%A5%E7%85%A7%E5%B8%82%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C&to[lnglat]=119.52685,35.416914&type=car&policy=1">高德查看路线</a><a class="btn" target="_blank" rel="noreferrer" href="https://uri.amap.com/navigation?to=119.52685,35.416914,%E6%97%A5%E7%85%A7%E5%B8%82%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C&mode=car&policy=1&src=qdtour&coordinate=gaode&callnative=1">手机一键导航到日照</a></div></div>
+<div class="card night"><h3>返程：威海 → 歙县<span class="chip night">9/30 12:00 · 1,107.6 km · 11 h 50 · ¥544（零点后出口免费）</span></h3>
+<ul>
+<li><b>走向</b>：G18 荣乌 → <b>G1813 威青</b> → S19 龙青 / G20 青银 → <b>G15 沈海</b>（青岛→日照→赣榆）→ G25 长深 → G2 京沪 → S28 → G4011 → <b>G4012 溧宁</b> → G56 → 歙县。</li>
+<li><b>换电</b>：海阳服务区（青岛方向）→ 日照服务区（海口方向）→ 江都服务区（上海方向，排队则 20 km 后 S28 郭村服务区）→ 前宋服务区（宁德方向）。</li>
+<li><b>备选</b>：G15 → G25 → G4211 宁芜经南京，1,133 km / 12 h 27 / ¥493，正撞南京 9/30 晚高峰，不建议。</li>
+<li><b>拥堵</b>：9/30 15–23 时各城出城高峰，19–21 时最堵：青岛东 / 流亭收费站、G15 日照—岚山段、南京绕城。12:00 出发大致青岛 15:00、日照 17:00、淮安 20:00、扬州 21:30、歙县 01:30。</li>
+</ul>
+<div class="btns"><a class="btn primary" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E5%A8%81%E6%B5%B7%E5%B8%82%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C&from[lnglat]=122.1203,37.5127&to[name]=%E6%AD%99%E5%8E%BF%E7%8E%8B%E6%9D%91%E9%95%87&to[lnglat]=118.399645,29.757614&type=car&policy=1">高德查看路线</a><a class="btn" target="_blank" rel="noreferrer" href="https://uri.amap.com/navigation?to=118.399645,29.757614,%E6%AD%99%E5%8E%BF%E7%8E%8B%E6%9D%91%E9%95%87&mode=car&policy=1&src=qdtour&coordinate=gaode&callnative=1">手机一键导航回家</a></div></div>
+<div class="card night"><h3>日照 → 青岛<span class="chip night">9/25 20:30 · 149 km · 2 h · ¥78</span></h3>
+<ul>
+<li><b>推荐</b>：G15 → G22 青兰 → 胶州湾大桥（¥30），去崂山区酒店顺路。</li>
+<li><b>备选</b>：G15 → S7602 疏港高速 → 胶州湾隧道（¥10，ETC 九五折），143.5 km / 2 h 03，去市南顺路。</li>
+<li><b>换电</b>：满电或 ≥50% 无需换；备选黄岛中石化站、崂山弄海园（秦岭路 2 号）。</li>
+<li><b>注意</b>：G15 南村—青日界改扩建段 2025-12 通车，部分服务区加油餐饮未全恢复；夜里 G15 日照—岚山段货车多。</li>
+</ul>
+<div class="btns"><a class="btn primary" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E6%97%A5%E7%85%A7%E4%B8%87%E5%B9%B3%E5%8F%A3&from[lnglat]=119.5636,35.3952&to[name]=%E9%9D%92%E5%B2%9B%E4%BA%94%E5%9B%9B%E5%B9%BF%E5%9C%BA&to[lnglat]=120.38391,36.06213&type=car&policy=1">高德查看路线</a></div></div>
+<div class="card night"><h3>青岛 → 威海 赶时间版<span class="chip night">备用 · 263.7 km · 2 h 59 · ¥101</span></h3>
+<ul>
+<li><b>走向</b>：S19 龙青 → G1813 威青 → G18 荣乌。</li>
+<li><b>换电</b>：海阳服务区（威海方向）换一次，到威海近满电，荣成两天不用再找站。</li>
+<li><b>用法</b>：D3 若下雨、起晚或崂山排队太久，放弃海岸线走这条。</li>
+</ul>
+<div class="btns"><a class="btn primary" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E9%9D%92%E5%B2%9B%E4%BA%94%E5%9B%9B%E5%B9%BF%E5%9C%BA&from[lnglat]=120.38391,36.06213&to[name]=%E5%A8%81%E6%B5%B7%E5%B8%82%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C&to[lnglat]=122.1203,37.5127&type=car&policy=1">高德查看路线</a></div></div>
+</div>
+
+<h3>白天风景：青岛 → 威海海岸线<span class="badge">9/27</span></h3>
+<div class="tablewrap"><table><thead><tr><th>分段</th><th>里程 / 时间</th><th>走法与看点</th></tr></thead><tbody>
+<tr><td>五四广场 → 崂山仰口</td><td>43.5 km · 1 h 03 · 免费</td><td>松岭路 → 仰口隧道 → S212。有环海公路预约就从仰口检查站进：雕龙嘴、泉心河沙滩、黄山村、青山渔村，到垭口原路返回。</td></tr>
+<tr><td>仰口 → 海阳凤城</td><td>87.8 km · 1 h 39 · 免费</td><td>S102 → 滨海公路 → 海滨西路。王哥庄大馒头、鳌山湾、丁字湾；海阳万米海滩、连理岛。</td></tr>
+<tr><td>海阳 → 乳山银滩</td><td>66.1 km · 58 min · ¥16</td><td>海翔中路 → G1813 短段 → 银金大道。G228 乳山口大桥原定 2025 年底通车，通车则全程地面 5 分钟过海，出发前看导航。</td></tr>
+<tr><td>乳山银滩 → 威海市区</td><td>97.3 km · 1 h 26 · ¥21</td><td>G1813 → G18 → 环山路。银滩大拇指广场、潮汐湖湿地看完日落再上高速。</td></tr>
+<tr><td><b>合计</b></td><td><b>≈295 km · 纯驾驶 5 h 06</b></td><td>加仰口 3 小时和沿途停留，12:00 从崂山出发约 19:30 到威海。</td></tr>
+</tbody></table></div>
+<div class="btns"><a class="btn" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E9%9D%92%E5%B2%9B%E4%BA%94%E5%9B%9B%E5%B9%BF%E5%9C%BA&from[lnglat]=120.38391,36.06213&to[name]=%E5%B4%82%E5%B1%B1%E4%BB%B0%E5%8F%A3%E6%B8%B8%E8%A7%88%E5%8C%BA&to[lnglat]=120.6718,36.2540&type=car&policy=1">① 到仰口</a><a class="btn" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E5%B4%82%E5%B1%B1%E4%BB%B0%E5%8F%A3&from[lnglat]=120.6718,36.2540&to[name]=%E6%B5%B7%E9%98%B3%E4%B8%87%E7%B1%B3%E6%B5%B7%E6%BB%A9&to[lnglat]=121.165,36.70&type=car&policy=1">② 到海阳</a><a class="btn" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E6%B5%B7%E9%98%B3&from[lnglat]=121.165,36.70&to[name]=%E4%B9%B3%E5%B1%B1%E9%93%B6%E6%BB%A9&to[lnglat]=121.70,36.80&type=car&policy=1">③ 到乳山银滩</a><a class="btn" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E4%B9%B3%E5%B1%B1%E9%93%B6%E6%BB%A9&from[lnglat]=121.70,36.80&to[name]=%E5%A8%81%E6%B5%B7%E5%9B%BD%E9%99%85%E6%B5%B7%E6%B0%B4%E6%B5%B4%E5%9C%BA&to[lnglat]=122.05,37.53&type=car&policy=1">④ 到威海</a></div>
+
+<h3>白天风景：威海千里山海自驾旅游公路<span class="badge">9/28–9/29</span></h3>
+<div class="grid two">
+<div class="card scenic"><h3>怎么走</h3><ul>
+<li><b>概况</b>：总长 1,001 km，主线 501 km（环海路 325 + 环山路 176），23 座驿站、66 处观景平台。本次只走两段精华。</li>
+<li><b>小环海路</b>：东山宾馆 → 小石岛湾约 25 km，官方建议自东向西：三连岛、半月湾、猫头山 2 号观景台、山东湾码头、恐龙湾、靖子龙王庙、"喂，海！"公园、葡萄滩、金海滩、国际海水浴场、火炬八街、小石岛。</li>
+<li><b>荣成东线</b>官方顺序：成山头 → 音乐公路（800 m，40 km/h，南→北《在希望的田野上》）→ 那香海·天鹅湖驿站 → 烟墩角 → 花斑彩石 → 海草房 → 瓦屋石·爱连湾驿站 → 爱伦湾海洋牧场 → 青鱼滩彩虹公路（约 10 km）。</li>
+<li><b>市区→成山头</b>：62.4 km · 1 h 18，海滨北路 → 海滨南路 → 成大路，免费沿海。</li>
+</ul>
+<div class="btns"><a class="btn" target="_blank" rel="noreferrer" href="https://www.weihai.gov.cn/col/col131698/index.html">威海市政府·千里山海专栏</a><a class="btn" target="_blank" rel="noreferrer" href="https://www.amap.com/dir?from[name]=%E5%A8%81%E6%B5%B7%E5%B8%82%E4%BA%BA%E6%B0%91%E6%94%BF%E5%BA%9C&from[lnglat]=122.1203,37.5127&to[name]=%E6%88%90%E5%B1%B1%E5%A4%B4%E6%99%AF%E5%8C%BA&to[lnglat]=122.7007,37.4030&type=car&policy=1">市区→成山头路线</a></div></div>
+<div class="card rose"><h3>限行与停车</h3><ul>
+<li><b>2026-04-25 至 10-07</b>，环海路 1 号、2 号辅线（猫头山、半月湾核心段）禁止一切机动车与非机动车。</li>
+<li>停外围停车场：半月湾北岸、南岸北山咀、双顶山、山东湾码头、喂海公园、海源公园；换摆渡巴士 20 元/人，8:00–20:00 流水，当日不限次，全程约 70 分钟；全景观光巴士 30 元。</li>
+<li>自驾替代：沿环海路主线开到"海岸城堡"酒店停车场也能看到猫头山，但去不了 270° 平台。</li>
+<li>别租小电驴上环海路：无非机动车道、坡陡弯急。</li>
+</ul></div>
+</div>
+</div></section>
+
+<section id="power"><div class="wrap">
+<h2>换电与补能（蔚来 ES6 · 100 度电）</h2>
+<p>高速按 110–120 km/h 实际续航 380–400 km 保守规划，满电出发。站点营业状态、电池数、是否 24 小时请在蔚来 App「加电 → 加电地图」勾选「高速公路 + 换电站」实时核对。</p>
+<div class="tablewrap"><table><thead><tr><th>高速</th><th>换电站</th><th>方向</th><th>本次用途</th><th>上线 / 备注</th></tr></thead><tbody>
+<tr><td>G4012 溧宁</td><td>前宋服务区（溧阳）NO.3694 / NO.3619</td><td>双向</td><td>去程换①（≈240 km 处）；回程换④</td><td>2026-01 / 2025-12，V2G 双向站</td></tr>
+<tr><td>G2 京沪</td><td>江都服务区（扬州）NO.3082 / NO.3083</td><td>双向</td><td>去程换②必须换满；回程换③</td><td>2025-01；京沪主干，假期高峰站</td></tr>
+<tr><td>S28 启扬</td><td>郭村服务区 NO.3813（+超充 NO.3171）</td><td>仅扬州方向</td><td>回程江都排队时的备用，20 km 后</td><td>2026-04-30</td></tr>
+<tr><td>G25 长深 / G15 江苏段</td><td>淮安—连云港—赣榆</td><td>—</td><td><span class="badge bad">无高速换电站</span> 江都→日照 ≈345 km 空窗</td><td>下高速备选：淮安富春路 NO.3646、涟水吾悦、灌南、赣榆、连云港海州 NO.3767</td></tr>
+<tr><td>G15 沈海</td><td>日照服务区（岚山区）NO.3805 / NO.3806</td><td>双向</td><td>去程换③（凌晨 3 点左右）；回程换②</td><td>2026-04-27；沈海山东段唯一双侧站，假期可能排队</td></tr>
+<tr><td>G1813 威青</td><td>海阳服务区</td><td>双向</td><td>去威海（可选）；回程换①（≈130 km）</td><td>2023-09-30 三代站</td></tr>
+<tr><td>G18 荣乌 / S19 龙青 / G22 青兰 / G4012 安徽段 / 南京绕城</td><td>—</td><td>—</td><td><span class="badge warn">未找到</span></td><td>文登东服务区仅国网 25 kW 桩；靠城区站兜底</td></tr>
+</tbody></table></div>
+<div class="grid two">
+<div class="card"><h3>城区换电站（下高速可达）</h3><ul>
+<li><b>歙县</b> 行知湖畔（清凉路 428 号，四代）；绩溪来苏北路 518 号 NO.3834（四代 + 超充）</li>
+<li><b>扬州</b> 江都国际汽车城（四代）、体育公园、运河三湾</li>
+<li><b>淮安 / 连云港</b> 富春路 NO.3646、涟水吾悦广场；海州振海路新奥 NO.3767、赣榆、灌南县站</li>
+<li><b>日照</b> 中石化日照第 3 加油站（河山镇，沈海高速日照出口北侧）</li>
+<li><b>青岛</b> 崂山弄海园（秦岭路 2 号 NO.3902，离石老人最近）、市南徐州路 NO.4023、市北长沙路 33 号、城阳夏庄（500 kW 超充）、黄岛中石化（长江东路 281 号）</li>
+<li><b>威海 / 荣成 / 乳山</b> 华发九龙湾、文登站、荣成惠果力折扣仓站、乳山胜利街 115 号（四代）</li>
+</ul></div>
+<div class="card"><h3>假期政策与排队</h3><ul>
+<li>2025 国庆中秋蔚来全网换电 109.8 万单，1,000 余座高速站承担高速加电近 80%；高峰风险点是江都和日照服务区。去程 9/24 夜、回程 9/30 白天都错开了 10/1 高峰。</li>
+<li>历年节假日高速换电免服务费（2023 中秋国庆 9/28–10/7、2024 春节等）；<b>2026 中秋、国庆政策截至 9/9 未发布</b>，一般假期前 3–5 天在 App / 官微公告。</li>
+<li>兜底：App「一键加电」24 小时；国网快充在文登东、威青文登、烟海乳山等服务区。</li>
+<li>官方入口：<a href="https://www.nio.cn/charger-map" target="_blank" rel="noreferrer">加电地图</a> · <a href="https://www.nio.cn/nio-power" target="_blank" rel="noreferrer">NIO Power</a></li>
+</ul></div>
+</div>
+</div></section>
+
+<section id="rizhao"><div class="wrap">
+<h2>日照：半天还是一天？</h2>
+<div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-tab="rzA">方案 A · 半天 + 当晚去青岛（推荐）</button><button role="tab" aria-selected="false" data-tab="rzB">方案 B · 住两晚，9/26 上午走</button></div>
+<div id="rzA" class="card sun">
+<div class="timeline">
+<div class="tl sun"><div class="t">11:00–12:30</div><div class="d">睡到自然醒；退房前把车留酒店或东夷小镇停车场（假期 10–15 时万平口各门最难停）；午餐巧克力渔家（万平口店，人均 90）或御尚鲜·央 10（海沙子面、海肠捞饭）</div></div>
+<div class="tl"><div class="t">13:30–15:30</div><div class="d">万平口 3 号门（白色巴士、海边秋千、爱心石）→ 2 号门海景咖啡 → 沿沙滩走到 5 号门 / 太公岛礁石。免费无需预约</div></div>
+<div class="tl"><div class="t">15:30–17:00</div><div class="d">阳光海岸绿道：万平口各门有租车点，电动车约 50 元/天，往北骑到"LOVE 树杈""天使翅膀"（导航阳光海岸二号停车场）；或直接开到灯塔风景区</div></div>
+<div class="tl sun"><div class="t">17:04 月出 · 17:55 日落 · 18:20 天黑</div><div class="d">灯塔广场 / 观涛广场：西边落日、东边海上明月，灯塔亮灯。9/25 下午涨潮（17:31 满潮），礁石被淹不能赶海</div></div>
+<div class="tl"><div class="t">18:30–20:30</div><div class="d">东夷小镇（距万平口 200 m）夜市晚餐赏月：海沙子面、烤鲅鱼、鲅鱼卷煎饼、日照羊汤；停车场 30 分钟免费后计时</div></div>
+<div class="tl night"><div class="t">20:30 → 22:40</div><div class="d">G15 → 胶州湾大桥 → 青岛崂山区酒店，149 km，¥78</div></div>
+</div>
+<p><b>为什么推荐：</b>日照的免费海岸线一个下午足够；中秋夜在海边过了，青岛 9/26 能拿到完整一天，避开周六日照赶海人潮和 G15 白天车流；也少订一晚中秋当天最贵的日照海景房。<b>代价：</b>凌晨刚开过夜路，晚上再开 2 小时，青岛酒店要备注 23:00 后到。</p>
+</div>
+<div id="rzB" class="card sun" hidden>
+<div class="timeline">
+<div class="tl"><div class="t">9/25</div><div class="d">同方案 A，晚上住回万平口酒店（订两晚更省事，凌晨到店也顺）</div></div>
+<div class="tl sun"><div class="t">9/26 05:52</div><div class="d">灯塔 / 万平口 1 号门看海上日出；或桃花岛景区北侧沙滩（人少，导航"日照桃花岛景区"往北 100 m）</div></div>
+<div class="tl"><div class="t">09:30–12:00</div><div class="d">太公岛牡蛎公园或任家台礁石公园赶海（9/26 低潮 11:52，带小桶小铲，不要光脚）</div></div>
+<div class="tl night"><div class="t">12:30 → 14:30</div><div class="d">G15 去青岛，周六午后大桥方向车多</div></div>
+</div>
+<p><b>适合：</b>想要日出 + 赶海 + 中秋夜海边三件都不落，且不介意青岛少半天。<b>代价：</b>9/25 晚海景房贵且紧张，周六 G15 与青岛景区更挤，青岛老城只剩半天。</p>
+</div>
+
+<h3>景点图鉴与建议</h3>
+<div class="gallery" data-city="rizhao"></div>
+<details><summary>展开：日照景点完整清单（费用、停车、时段）</summary>
+<div class="tablewrap"><table><thead><tr><th>景点</th><th>费用 / 预约</th><th>停车</th><th>适合时段</th><th>备注</th></tr></thead><tbody>
+<tr><td>万平口海滨风景区（1–5 号门）</td><td>免费，无需预约</td><td>各门停车场，30 分钟免费，3–5 元/时封顶；1、3 号门最难停，4 号门、太公岛路边宽松</td><td>下午、傍晚、夜晚</td><td>2026 升级"一门一主题"，2/3 号门有自动驾驶接驳环线；1 号门石碑祈福钟，2 号门咖啡，3 号门网红打卡，5 号门免费赶海通太公岛</td></tr>
+<tr><td>日照灯塔风景区</td><td>免费，全天</td><td>灯塔风景区停车场、海景商务中心停车场</td><td>日落、夜景</td><td>与万平口 1 号门相连；退潮露出"爱心海"礁石水洼</td></tr>
+<tr><td>阳光海岸绿道</td><td>免费</td><td>阳光海岸 2 号 / 6 号停车场（可躺车里看日出）</td><td>下午骑行</td><td>灯塔广场北至两城河口 28 km，骑行道 25.5 km；碧海路坡多风大，分段租</td></tr>
+<tr><td>东夷小镇</td><td>免费，夜市约 18:00 起</td><td>1/2/3 号停车场，30 分钟免费</td><td>夜晚</td><td>中秋假期常有打月饼、做花灯、曲艺活动，出发前看"日照文旅"公众号</td></tr>
+<tr><td>太公岛牡蛎公园</td><td>免费</td><td>路边免费车位较多</td><td>退潮前后 3 小时</td><td>市区最好的免费赶海点；9/25 下午涨潮不适合</td></tr>
+<tr><td>任家台礁石公园</td><td>免费</td><td>10 元/次，无商店无厕所</td><td>日落 / 退潮</td><td>"日落天花板"，距万平口约 12–15 km；大泉沟渔港停车 10 元/次，船坞轨道出片</td></tr>
+<tr><td>海滨国家森林公园</td><td>大门免费，观光车 10 元</td><td>正门大停车场</td><td>下午</td><td>二号门进万亩水杉林，"中国第一金滩"；本次时间紧可舍</td></tr>
+<tr><td>刘家湾赶海园 / 海洋公园 / 桃花岛上岛</td><td>80 / 220 / 船票往返约 80</td><td>—</td><td>—</td><td>本次不推荐：收费且与免费点重复</td></tr>
+</tbody></table></div></details>
+<div class="grid two">
+<div class="card"><h3>9/25 关键时刻（日照）</h3><div class="kv"><b>日出 / 日落</b><span>05:52 / 17:55，天黑 18:20</span><b>月出</b><span>17:04（亮度 97%，满月 9/27 00:49）</span><b>潮汐（待核实）</b><span>高潮 04:53 → 低潮 11:17 → 高潮 17:31 → 低潮 23:31；9/26 低潮 11:52</span><b>天气</b><span>9 月均温 18–26 ℃，海水 24–26 ℃可下海但偏凉；海边凌晨和傍晚很冷，带外套</span><b>潮汐表</b><span><a href="https://www.1cxb.com/tides/14.html" target="_blank" rel="noreferrer">日照港（石臼所）潮汐表</a></span></div></div>
+<div class="card"><h3>吃与避坑</h3><ul>
+<li>巧克力渔家（万平口店，人均 90）、御尚鲜·央 10 渔家菜（70–110）、东夷海鲜巨无霸（两人约 150）、宗合渔家（任家台，65–85）、小李子平价海鲜加工（石臼市场旁，50–70）</li>
+<li>本地博主反复推荐：大学城夜市（烤冷面、梅花小蛋糕）、东夷小镇海沙子面、老曲炸鸡、卤水豆腐</li>
+<li>避坑：不去司机 / 民宿推荐的回扣店；石臼市场自选先用公秤复秤、拍照做记号，加工费 15–30 元/斤</li>
+<li>凌晨到店：<b>订 9/24 晚的房</b>并电话告知凌晨 3–4 点到，可睡到 12:00 退房；不要订 9/25 的房；钟点房假期常不提供</li>
+</ul></div>
+</div>
+</div></section>
+
+<section id="qingdao"><div class="wrap">
+<h2>青岛：两天，车停酒店，地铁进城</h2>
+<div class="grid two">
+<div class="card scenic"><h3>D2 · 9/26 周六 老城 + 灯光秀</h3>
+<div class="timeline">
+<div class="tl"><div class="t">06:30–08:30</div><div class="d">栈桥（6 点开始人少）→ 中山路 → 浙江路天主教堂（8:00 开门，10 元）；早餐劈柴院外围或中山路老店</div></div>
+<div class="tl"><div class="t">09:00–11:30</div><div class="d">大学路、鱼山路 → 信号山（免费，需预约）→ 小鱼山（免费，"魅力海滨"公众号预约）</div></div>
+<div class="tl"><div class="t">11:30–14:30</div><div class="d">八大关（核心区 4/1–11/30 禁社会车辆）、花石楼 8.5 元、第二海水浴场；午餐春和楼（香酥鸡、虾仁蒸饺）或船歌鱼水饺</div></div>
+<div class="tl"><div class="t">15:00–18:00</div><div class="d">五四广场 → 奥帆中心 → 情人坝；小麦岛留到黄昏（2 号线麦岛站 E 口）</div></div>
+<div class="tl sun"><div class="t">18:30–22:00</div><div class="d">浮山湾灯光秀（9/16–10/8 每晚 18:30–22:00，奥帆中心 / 情人坝 / 三浴最佳）</div></div>
+<div class="tl"><div class="t">19:30</div><div class="d">2 号线到台东：营口路市场买海鲜进啤酒屋加工（5–20 元/份，人均 50–100，选本地客多、明码标价的店）；啤酒博物馆旺季 60 元含两杯，须实名预约</div></div>
+</div>
+<p class="muted">2 号线串起石老人浴场—麦岛—五四广场—台东—利津路（啤酒博物馆）；3 号线五四广场换乘到人民会堂（大学路）、青岛站（栈桥）；1 号线中山路站 D 口出天主教堂。地铁 P+R 停车场当日乘车 5 折。</p></div>
+<div class="card scenic"><h3>D3 · 9/27 周日 崂山仰口 → 海岸线</h3>
+<ul>
+<li><b>为什么是仰口</b>：车能直接停仰口停车场（1–5 号）不用换乘；索道 35 元上觅天洞，海景最好；出来就是滨海大道北上。太清索道 2026-04-24 起停运，9/5 起垭口—索道上站等三段步道封闭。</li>
+<li><b>门票</b>：仰口 90 元（旺季含观光车）；南线联票太清+仰口 150。"崂山风景区"公众号 / 小程序提前 0–7 天预约，刷身份证入园；旺季 7:00–18:00，17:00 停止入园。</li>
+<li><b>环海公路</b>：仰口—垭口段自驾须公众号「车辆预约」免费预约，提前 5 天早 8:00 放号（<b>9/22 08:00 抢 9/27</b>），每日 600 台，仰口进仰口出。没抢到就停仰口坐观光车或 618 路。</li>
+<li><b>时间</b>：7:30 前到停车场，9:30 后入园排队严重；12:00 前出，王哥庄大馒头午餐。</li>
+<li><b>雨天备选</b>：小麦岛日出 05:50 → 石老人海水浴场（免费，442 车位）→ 走威青高速。</li>
+</ul>
+<div class="btns"><a class="btn" target="_blank" rel="noreferrer" href="https://qdlaoshan.cn/">崂山风景区官网公告</a><a class="btn" target="_blank" rel="noreferrer" href="http://www.qingdao.gov.cn/zwgk/xxgk/whly/gkml/gzxx/202603/t20260324_10544760.shtml">环海公路预约规定</a></div></div>
+</div>
+<h3>景点图鉴与建议</h3>
+<div class="gallery" data-city="qingdao"></div>
+<details><summary>展开：青岛自驾停车与规则</summary>
+<div class="tablewrap"><table><thead><tr><th>区域</th><th>停哪里</th><th>费用</th><th>说明</th></tr></thead><tbody>
+<tr><td>市南一类区（栈桥、八大关、五四广场）</td><td>道路泊位 / 经营性停车场</td><td>旺季（4/20–10/10）首小时 3.5 元/30 分，之后 4 元/30 分，首日封顶 60，次日 80</td><td>老城单行道多、假期车位极紧，建议不开车进老城</td></tr>
+<tr><td>八大关</td><td>天泰体育场（文登路 9 号，300+ 位）、汇泉湾 A/B/C 区（675 位）</td><td>同上</td><td>核心区 4/1–11/30 禁社会车辆，步行经二浴进花石楼</td></tr>
+<tr><td>五四广场 / 奥帆</td><td>海信广场停车场（东海西路 50 号，899 位）、奥帆中心停车场</td><td>8 元/时，封顶 64</td><td>晚上看灯光秀可开车来，19 点后好停</td></tr>
+<tr><td>小麦岛 / 石老人</td><td>银海大世界、麦岛广场；石老人浴场 2 处停车场 442 位</td><td>按市价</td><td>周末 10–19 点东海路麦岛段拥堵</td></tr>
+<tr><td>崂山</td><td>仰口停车场 1–5 号；太清 / 巨峰在大河东游客中心换观光车</td><td>—</td><td>私家车不能进五个查验口以内</td></tr>
+<tr><td>外地牌照</td><td colspan="3">青岛无常态化限行限号；5/1–10/15 前海一线 7–18 时禁大巴，私家车不受限；假期白天太平路、莱阳路、南海路，晚间香港路、澳门路、太平角易堵</td></tr>
+</tbody></table></div></details>
+<p class="muted">日出 / 日落：9/26 05:49 / 17:50，9/27 05:50 / 17:49。9 月底 17–24 ℃，海水约 24 ℃。</p>
+</div></section>
+
+<section id="weihai"><div class="wrap">
+<h2>威海 · 荣成：环海路、东线、成山头日出</h2>
+<div class="grid two">
+<div class="card scenic"><h3>D4 · 9/28 周一 北岸环海路 → 荣成东线</h3>
+<div class="timeline">
+<div class="tl"><div class="t">07:30</div><div class="d">火炬八街（专用停车场 694 位，1 小时内免费）。4,414 赞的测评说"就是一条普通坡道，人多靠 P"，早到拍完就走，顺路国际海水浴场散步</div></div>
+<div class="tl"><div class="t">09:00–12:00</div><div class="d">导航"半月湾北岸停车场"换摆渡巴士：2 号观景台看猫头山山形，3 号"大项链"礁石栈道，13 号可下崖底</div></div>
+<div class="tl"><div class="t">12:00–14:00</div><div class="d">海源公园（渔船、木栈道，导航"威海宾馆"）、三连岛；午餐韩乐坊巧克力渔家或小石岛海鲜大排档</div></div>
+<div class="tl"><div class="t">14:30–18:00</div><div class="d">环海路东行（东浦湾沙滩可停）→ 孤独公约咖啡 → 那香海钻石沙滩（南侧免费停车）→ 布鲁威斯号（2026-05 报道仍在，园区票约 19.9 元，9 点后必堵，傍晚光线最好）</div></div>
+<div class="tl"><div class="t">18:00</div><div class="d">入住那香海 / 成山头一带</div></div>
+</div></div>
+<div class="card sun"><h3>D5 · 9/29 周二 成山头日出 → 东线 → 市区</h3>
+<div class="timeline">
+<div class="tl sun"><div class="t">04:45–08:00</div><div class="d">成山头（天尽头、好运角）：旺季 148 元（线上约 138），观光车 20 元/人另购，私家车入园 80 元/车，景区停车免费；提前 1 小时入园；公众号"西霞口旅游"实名预约，热线 0631-7834888</div></div>
+<div class="tl"><div class="t">08:30–12:30</div><div class="d">音乐公路 → 烟墩角（免费停车，9 月没有天鹅，看海草房）→ 东楮岛 → 青鱼滩彩虹公路。可选鸡鸣岛：虎头角码头免费停车，往返船 120，8:30–16:00 每小时一班，岛很小，2–3 小时</div></div>
+<div class="tl"><div class="t">13:00–17:30</div><div class="d">回市区约 1.5 小时。二选一：刘公岛（122 元含往返船，进岛末班 16:00，出岛末班 17:30，码头停车 2,600 位）；或幸福门（登顶 50 元）、威海公园大相框、环翠楼、至海港湾"海上足球场"</div></div>
+<div class="tl"><div class="t">18:30</div><div class="d">北方饺子王（统一路 146 号，人均 40）、海鲜居（统一路 418 号）、老刺参海鲜酒楼；二刷博主推荐韩信烤肉、龙继斑鱼火锅，点名韩乐坊踩雷两家</div></div>
+<div class="tl"><div class="t">夜</div><div class="d">宿幸福门 / 韩乐坊一带，9/30 逛完早市出发</div></div>
+</div></div>
+</div>
+<h3>景点图鉴与建议</h3>
+<div class="gallery" data-city="weihai"></div>
+<p class="muted">荣成日出 / 日落：9/28 05:42 / 17:38，9/29 05:43 / 17:37，9/30 05:44 / 17:35。9 月下旬 17–25 ℃，北风 2–4 级，紫外线强。</p>
+</div></section>
+
+<section id="hotels"><div class="wrap">
+<h2>酒店：大床房、房间大、停车方便</h2>
+<p>携程 2026-09-09 按入住日期实查，价格为登录账号显示的优惠后起价（实际以下单页为准）。<b>钻级</b>为携程钻石等级（◆ 数，对应星级档次）；已进详情页核对的酒店标了面积。选择逻辑：夫妻两人、大床、≥30 ㎡、评分 4.7 以上、免费停车、不必市中心。</p>
+<div class="tabs" role="tablist" id="hotelTabs"></div>
+<div class="hfilter">
+<label><input type="checkbox" id="fStar"> 只看 4 钻以上</label>
+<label><input type="checkbox" id="fSize"> 只看 ≥30 ㎡ 或未核</label>
+<label><input type="checkbox" id="fScore" checked> 只看评分 ≥4.5</label>
+<label>排序 <select id="fSort"><option value="rec">推荐</option><option value="price">价格从低到高</option><option value="score">评分从高到低</option><option value="star">钻级从高到低</option></select></label>
+<span class="muted" id="hCount"></span>
+</div>
+<div class="hlist" id="hotelList"></div>
+<div class="grid two" style="margin-top:16px">
+<div class="card"><h3>每晚怎么选</h3><ul>
+<li><b>日照</b>凌晨到只睡半天：<b>蔚蓝假日</b> 35–37 ㎡ 大床 ¥217–297，万平口旁、地下停车；想住品牌选希尔顿惠庭 36 ㎡ ¥340 或东夷小镇希尔顿欢朋（房小但夜市步行）。</li>
+<li><b>青岛</b>两晚不住市南：<b>证大喜玛拉雅</b> 5 钻 38 ㎡ ¥481/晚，2 号线石老人浴场站，去仰口 30 分钟，出发威海顺路；预算高一档可看鲁商凯悦、海尔路亚朵。</li>
+<li><b>威海第一晚</b>要早上去火炬八街、半月湾：<b>半岛·观澜</b> 2 米特大床 30 ㎡ ¥249–275，一线海景新楼；亚朵 35–40 ㎡ ¥588 更大。</li>
+<li><b>荣成一晚</b>为成山头日出：<b>金悦海景花园</b> 2.2 米特大床 43 ㎡ ¥387 含双早（2025 新店，评价少）；稳妥选国信东方（距海 50 m，泳池）；想住高分 5 钻选荣成市区龙源海怡（离成山头 40 km，日出要 4 点出门）。</li>
+<li><b>威海最后一晚</b>市区好走 G18：<b>九紫黄龙璀丽</b> 5 钻 36 ㎡ ¥366（韩乐坊旁，免费停车）；幸福门亚朵 / 桔子水晶 33–38 ㎡ ¥441–491 更新。</li>
+</ul></div>
+<div class="card"><h3>携程搜索入口（已带日期）</h3><div class="btns">
+<a class="btn" target="_blank" rel="noreferrer" href="https://hotels.ctrip.com/hotels/list?cityId=1106&cityName=%E6%97%A5%E7%85%A7&destName=%E6%97%A5%E7%85%A7&searchWord=%E4%B8%87%E5%B9%B3%E5%8F%A3&searchType=CT&checkin=2026-09-24&checkout=2026-09-25&crn=1&countryId=1&flexType=1&fixedDate=0&curr=CNY&locale=zh-CN&directSearch=1&old=1">日照·万平口 9/24</a>
+<a class="btn" target="_blank" rel="noreferrer" href="https://hotels.ctrip.com/hotels/list?cityId=7&cityName=%E9%9D%92%E5%B2%9B&destName=%E9%9D%92%E5%B2%9B&searchWord=%E7%9F%B3%E8%80%81%E4%BA%BA&searchType=CT&checkin=2026-09-25&checkout=2026-09-27&crn=1&countryId=1&flexType=1&fixedDate=0&curr=CNY&locale=zh-CN&directSearch=1&old=1">青岛·石老人 9/25–27</a>
+<a class="btn" target="_blank" rel="noreferrer" href="https://hotels.ctrip.com/hotels/list?cityId=7&cityName=%E9%9D%92%E5%B2%9B&destName=%E9%9D%92%E5%B2%9B&searchWord=%E4%BA%94%E5%9B%9B%E5%B9%BF%E5%9C%BA&searchType=CT&checkin=2026-09-25&checkout=2026-09-27&crn=1&countryId=1&flexType=1&fixedDate=0&curr=CNY&locale=zh-CN&directSearch=1&old=1">青岛·五四广场 9/25–27</a>
+<a class="btn" target="_blank" rel="noreferrer" href="https://hotels.ctrip.com/hotels/list?cityId=479&cityName=%E5%A8%81%E6%B5%B7&destName=%E5%A8%81%E6%B5%B7&searchWord=%E5%9B%BD%E9%99%85%E6%B5%B7%E6%B0%B4%E6%B5%B4%E5%9C%BA&searchType=CT&checkin=2026-09-27&checkout=2026-09-28&crn=1&countryId=1&flexType=1&fixedDate=0&curr=CNY&locale=zh-CN&directSearch=1&old=1">威海·国际海水浴场 9/27</a>
+<a class="btn" target="_blank" rel="noreferrer" href="https://hotels.ctrip.com/hotels/list?cityId=833&cityName=%E8%8D%A3%E6%88%90&destName=%E8%8D%A3%E6%88%90&searchWord=%E9%82%A3%E9%A6%99%E6%B5%B7&searchType=CT&checkin=2026-09-28&checkout=2026-09-29&crn=1&countryId=1&flexType=1&fixedDate=0&curr=CNY&locale=zh-CN&directSearch=1&old=1">荣成·那香海 9/28</a>
+<a class="btn" target="_blank" rel="noreferrer" href="https://hotels.ctrip.com/hotels/list?cityId=479&cityName=%E5%A8%81%E6%B5%B7&destName=%E5%A8%81%E6%B5%B7&searchWord=%E5%B9%B8%E7%A6%8F%E9%97%A8&searchType=CT&checkin=2026-09-29&checkout=2026-09-30&crn=1&countryId=1&flexType=1&fixedDate=0&curr=CNY&locale=zh-CN&directSearch=1&old=1">威海·幸福门 9/29</a>
+</div><p class="muted">价格每天变动，中秋前一周通常再涨一轮；先锁定可免费取消的房型，出发前 1–2 天再比价。勾选的酒店会计入下方预算。</p></div>
+</div>
+</div></section>
+
+<section id="tools"><div class="wrap">
+<h2>小工具</h2>
+<div class="grid tools">
+<div class="card"><h3>① 夜路时间推演器</h3>
+<p class="muted">改出发时间、每次换电分钟数，自动算各节点到达时间。均速按高速 90 km/h（含加减速）估算。</p>
+<label class="f">路线 <select id="planLeg"><option value="go">去程 歙县→日照（9/24）</option><option value="back">返程 威海→歙县（9/30）</option><option value="rq">日照→青岛（9/25）</option><option value="qw">青岛→威海 海岸线（9/27）</option></select></label>
+<label class="f">出发时间 <input type="datetime-local" id="planStart" value="2026-09-24T19:00"></label>
+<label class="f">每次换电（含排队）<input type="number" id="planSwap" value="15" min="5" max="90"> 分钟　均速 <input type="number" id="planSpeed" value="90" min="60" max="120"> km/h</label>
+<div class="tablewrap"><table id="planTable" style="min-width:0"><thead><tr><th>节点</th><th>里程</th><th>预计到达</th><th>说明</th></tr></thead><tbody></tbody></table></div>
+<div id="planNote" class="callout leaf"></div>
+</div>
+<div class="card"><h3>② 预算计算器</h3>
+<p class="muted">酒店金额来自上面勾选的房型；换电如有首任车主免费权益填 0。</p>
+<label class="f">过路费 去程 <input type="number" id="bToll1" value="382"> 日照→青岛 <input type="number" id="bToll2" value="78"></label>
+<label class="f">青岛→威海 <input type="number" id="bToll3" value="37"> 威海 / 荣成市内 <input type="number" id="bToll4" value="20"></label>
+<label class="f">返程 <input type="number" id="bToll5" value="0"> <small>10/1 零点后出口免费；提前出口约 ¥544</small></label>
+<label class="f">换电 <input type="number" id="bSwapN" value="7"> 次 × <input type="number" id="bSwapP" value="0"> 元</label>
+<label class="f">餐饮 每人每天 <input type="number" id="bFood" value="180"> 元 × 2 人 × 6 天</label>
+<label class="f">门票 <input type="number" id="bTicket" value="676"> <small>崂山仰口 90×2 + 成山头 148×2+20×2+80 + 猫头山巴士 20×2 + 布鲁威斯 20×2</small></label>
+<label class="f">可选 <label><input type="checkbox" id="bLgd"> 刘公岛 122×2</label> <label><input type="checkbox" id="bJmd"> 鸡鸣岛 120×2</label> <label><input type="checkbox" id="bBeer"> 啤酒博物馆 60×2</label></label>
+<label class="f">酒店（已勾选）<b id="bHotel">0</b> 元　其他 / 零花 <input type="number" id="bMisc" value="500"></label>
+<p>合计 <span class="total" id="bTotal">--</span> 元</p>
+</div>
+<div class="card"><h3>③ 预约与待办（按日期）</h3><ul class="check" id="todoList"></ul><p class="muted">勾选状态存在本机浏览器里。</p></div>
+<div class="card"><h3>④ 打包清单</h3><ul class="check" id="packList"></ul><div class="btns"><button class="btn" id="packAdd">＋ 添加一项</button><button class="btn" id="packReset">重置</button></div></div>
+</div>
+<div class="card" style="margin-top:16px"><h3>⑤ 关键时刻表</h3>
+<div class="tablewrap"><table><thead><tr><th>日期</th><th>地点</th><th>日出</th><th>日落</th><th>月出</th><th>潮汐 / 说明</th></tr></thead><tbody>
+<tr><td>9/25 周五</td><td>日照</td><td>05:52</td><td>17:55</td><td>17:04</td><td>高潮 04:53 · 低潮 11:17 · 高潮 17:31 · 低潮 23:31（待核实）</td></tr>
+<tr><td>9/26 周六</td><td>青岛</td><td>05:49</td><td>17:50</td><td>≈17:35</td><td>日照低潮 11:52（方案 B 赶海）</td></tr>
+<tr><td>9/27 周日</td><td>青岛 → 乳山</td><td>05:50</td><td>17:49</td><td>≈18:05</td><td>满月 00:49；乳山银滩看日落</td></tr>
+<tr><td>9/28 周一</td><td>威海</td><td>05:42</td><td>17:38</td><td>—</td><td>猫头山摆渡车 8:00–20:00</td></tr>
+<tr><td>9/29 周二</td><td>成山头</td><td>05:43</td><td>17:37</td><td>—</td><td>04:45 前入园；刘公岛出岛末班 17:30</td></tr>
+<tr><td>9/30 周三</td><td>威海</td><td>05:44</td><td>17:35</td><td>—</td><td>12:00 出发；10/1 00:00 后驶出高速免费</td></tr>
+</tbody></table></div></div>
+</div></section>
+
+<section id="risks"><div class="wrap">
+<h2>风险与提示</h2>
+<div class="grid three">
+<div class="card rose"><h3>通行费与假期</h3><ul><li>中秋 9/25–27 <b>不免费</b>；国庆 10/1 00:00–10/7 24:00 免费，<b>以驶离出口时间为准</b>，ETC 出口结算，不用在入口等零点。</li><li>9/30 15–23 时出城高峰，山东高速收费站可能间隔放行。</li><li>胶州湾隧道 10 元、大桥 30 元，国庆期间对小客车免费。</li></ul></div>
+<div class="card rose"><h3>预约窗口</h3><ul><li>崂山环海公路：9/22 08:00 放 9/27 名额，600 台，抢不到就停仰口。</li><li>崂山门票、成山头、刘公岛、啤酒博物馆均线上实名预约，假期前一周官方会发限流公告。</li><li>崂山中秋是否照常放号、猫头山限行是否延长，出发前 3 天再看公告。</li></ul></div>
+<div class="card rose"><h3>路况与安全</h3><ul><li>连续驾驶不超过 4 小时；两人换着开，凌晨 1–4 点最困，三次换电正好当强制休息。</li><li>苏北凌晨团雾看江苏交警预警；山东限速 110–80 反复变化且区间测速，跟导航走。</li><li>G4012 安徽段没有换电站，出发满电；江都必须换满。</li><li>崂山、猫头山、布鲁威斯号都"吃天气"，阴雨改室内或换顺序。</li></ul></div>
+<div class="card rose"><h3>住宿</h3><ul><li>日照订 9/24 晚的房，备注凌晨 3–4 点到；青岛 9/25 备注 23:00 后到。</li><li>那香海一带餐饮少，晚饭要么酒店要么开车去港西镇。</li><li>半月湾附近 1 km 以外的民宿夜里冷清，住酒店更稳。</li></ul></div>
+<div class="card rose"><h3>吃海鲜</h3><ul><li>看池称重、确认单价、公秤复秤；不进国际海水浴场、刘公岛码头门口的海鲜馆；青岛啤酒屋警惕鲜啤兑水、海鲜调包。</li><li>乳山下高速吃生蚝海胆人均 100 左右，回程可当午餐。</li></ul></div>
+<div class="card rose"><h3>天气与装备</h3><ul><li>9 月底 17–25 ℃，海边早晚风大，带薄外套；海水 24 ℃ 左右。</li><li>紫外线强，防晒帽 / 防晒衣；赶海带防滑鞋。</li></ul></div>
+</div>
+</div></section>
+
+<section id="sources"><div class="wrap">
+<h2>资料来源</h2>
+<div class="grid two">
+<div class="card"><h3>官方与地图</h3><ul class="src">
+<li><a href="https://www.weihai.gov.cn/col/col131698/index.html" target="_blank" rel="noreferrer">威海市政府·千里山海自驾旅游公路专栏</a>；<a href="https://www.weihai.gov.cn/art/2026/4/20/art_58956_6296646.html" target="_blank" rel="noreferrer">2026-04-20 环海路辅线限行与摆渡车公告</a>；<a href="https://wlj.weihai.gov.cn/art/2021/4/20/art_13662_2572529.html" target="_blank" rel="noreferrer">威海文旅局·首批 12 驿站</a></li>
+<li><a href="https://qsyxxgk.weihai.gov.cn/art/2026/4/20/art_85585_2871057.html" target="_blank" rel="noreferrer">刘公岛 2026 票价公告</a>；<a href="https://www.xixiakou.com/" target="_blank" rel="noreferrer">成山头·西霞口官网</a></li>
+<li><a href="https://qdlaoshan.cn/" target="_blank" rel="noreferrer">崂山风景区官网</a>；<a href="http://www.qingdao.gov.cn/zwgk/xxgk/whly/gkml/gzxx/202603/t20260324_10544760.shtml" target="_blank" rel="noreferrer">青岛政务网·环海公路车辆预约</a>；<a href="http://qd.bendibao.com/xiuxian/2026411/100950.shtm" target="_blank" rel="noreferrer">青岛本地宝·八大关停车</a>；<a href="https://finance.sina.com.cn/roll/2026-04-20/doc-inhvcewe3930412.shtml" target="_blank" rel="noreferrer">市南旺季停车收费</a></li>
+<li><a href="https://rizhao.sdnews.com.cn/rzyw/202606/t20260618_4695011.htm" target="_blank" rel="noreferrer">日照万平口 2026 升级</a>；<a href="https://m.thepaper.cn/newsDetail_forward_27481230" target="_blank" rel="noreferrer">阳光海岸绿道</a>；<a href="https://m.thepaper.cn/newsDetail_forward_24795982" target="_blank" rel="noreferrer">日照阳光海岸停车泊位</a>；<a href="https://news.iqilu.com/shandong/shandonggedi/20260724/5931275.shtml" target="_blank" rel="noreferrer">日照交警易堵路段</a></li>
+<li><a href="https://xxgk.mot.gov.cn/jigou/glj/202006/t20200623_3312194.html" target="_blank" rel="noreferrer">交通运输部·免费通行以驶离出口时间为准</a>；<a href="https://www.beijing.gov.cn/ywdt/gzdt/202511/t20251107_4265508.html" target="_blank" rel="noreferrer">2026 免费时段</a></li>
+<li>高德地图 2026-09-09 路线查询；<a href="https://www.nio.cn/charger-map" target="_blank" rel="noreferrer">蔚来加电地图</a>；<a href="https://www.nio.cn/power-articles/20251218003" target="_blank" rel="noreferrer">前宋服务区站</a>、<a href="https://www.nio.cn/power-articles/20250127014" target="_blank" rel="noreferrer">江都服务区站</a>、<a href="https://m.autohome.com.cn/share/article/1226604" target="_blank" rel="noreferrer">G15 山东段换电网络</a>、<a href="https://www.chinanews.com.cn/cj/2026/05-08/10617256.shtml" target="_blank" rel="noreferrer">2026 五一高速换电报告</a></li>
+<li>日出日落：USNO / bmcx；潮汐：tides4fishing（待与日照港潮汐表核对）</li>
+</ul></div>
+<div class="card"><h3>小红书 · 知乎 · B 站 · 携程</h3><ul class="src">
+<li>小红书：<a href="https://www.xiaohongshu.com/explore/69fc04080000000038036ece" target="_blank" rel="noreferrer">日照，比起万平口，我更喜欢这条沿海公路</a>（3,713 赞）· <a href="https://www.xiaohongshu.com/explore/6a369e5a0000000006031346" target="_blank" rel="noreferrer">日照保姆级攻略</a>（3,380）· <a href="https://www.xiaohongshu.com/explore/6a36722a000000001603f803" target="_blank" rel="noreferrer">日照适合看海的位置</a>（3,677）· <a href="https://www.xiaohongshu.com/explore/6a64a0ed000000001d00ddeb" target="_blank" rel="noreferrer">8–9 月日照攻略</a> · <a href="https://www.xiaohongshu.com/explore/6a504206000000000702e61e" target="_blank" rel="noreferrer">自驾崂山不要直接来</a>（3,466）· <a href="https://www.xiaohongshu.com/explore/69bf9804000000001a02de26" target="_blank" rel="noreferrer">威海攻略：真的不要去火炬八街</a>（4,414）· <a href="https://www.xiaohongshu.com/explore/6a57732300000000150279d9" target="_blank" rel="noreferrer">比起火炬八街更推荐这 3 个地</a>（2,839）· <a href="https://www.xiaohongshu.com/explore/6a8fc85100000000210320cc" target="_blank" rel="noreferrer">去完威海我的真实感受</a> · <a href="https://www.xiaohongshu.com/explore/69fd5d5d0000000036001268" target="_blank" rel="noreferrer">开车玩猫头山攻略</a> · <a href="https://www.xiaohongshu.com/explore/6a4120c6000000001003e2c1" target="_blank" rel="noreferrer">千里山海自驾强推布鲁威斯</a> · <a href="https://www.xiaohongshu.com/explore/6a72aee70000000024025e4f" target="_blank" rel="noreferrer">威海环海自驾公路强推</a> · <a href="https://www.xiaohongshu.com/explore/6a58d905000000000f01f453" target="_blank" rel="noreferrer">二刷威海三天两晚</a> · <a href="https://www.xiaohongshu.com/explore/6a796c4400000000250126d4" target="_blank" rel="noreferrer">南京自驾青岛威海 6 天 5 晚</a> · <a href="https://www.xiaohongshu.com/explore/6a979b64000000000d0267b7" target="_blank" rel="noreferrer">三刷山东的海</a> · <a href="https://www.xiaohongshu.com/explore/68e7a7040000000007014629" target="_blank" rel="noreferrer">国庆浙江自驾山东电车经验</a></li>
+<li>知乎：<a href="https://zhuanlan.zhihu.com/p/643119073" target="_blank" rel="noreferrer">日照旅游攻略（木鸟民宿）</a> · <a href="https://zhuanlan.zhihu.com/p/626100854" target="_blank" rel="noreferrer">威海千里山海自驾旅游公路</a> · <a href="https://zhuanlan.zhihu.com/p/549272378" target="_blank" rel="noreferrer">本地人带你逛威海：鸡鸣岛 + 那香海</a></li>
+<li>B 站：<a href="https://www.bilibili.com/video/BV19qjizDEfC" target="_blank" rel="noreferrer">山东半岛海岸线自驾游全攻略</a> · <a href="https://www.bilibili.com/video/BV1tk4y1j73x" target="_blank" rel="noreferrer">青烟威自驾路书</a> · <a href="https://www.bilibili.com/video/BV1aqvQBQEcb" target="_blank" rel="noreferrer">威海旅游全攻略｜市区＋荣成</a> · <a href="https://www.bilibili.com/video/BV132421A7VN" target="_blank" rel="noreferrer">凌晨五点威海的第一缕阳光（影视飓风）</a> · <a href="https://www.bilibili.com/video/BV18V411L71G" target="_blank" rel="noreferrer">威海三日攻略（迈得丘）</a> · <a href="https://www.bilibili.com/video/BV1q2akeWEWT" target="_blank" rel="noreferrer">千里山海路荣成彩虹路</a> · <a href="https://www.bilibili.com/video/BV1Vi421Z7sA" target="_blank" rel="noreferrer">G1813 威青高速全程 POV</a></li>
+<li>携程：酒店列表与详情页（2026-09-09 查询）</li>
+<li>图片：本地图片来自 <a href="https://commons.wikimedia.org/" target="_blank" rel="noreferrer">Wikimedia Commons</a>，各卡片下标注作者与许可（CC BY / CC BY-SA）；个别外链图来自携程社区与威海市政府网站，版权归原作者，仅作行前参考。</li>
+</ul></div>
+</div>
+</div></section>
+
+<footer><div class="wrap">
+<p>2026-09-09 整理的行前攻略。票价、房价、预约规则、换电站状态会变，出发前以官方公告、携程下单页和蔚来 App 为准。页面纯静态，可离线打开；勾选与预算保存在本机浏览器。</p>
+<p><a href="archive/index_v1_train_plan.html">上一版（高铁 + 租车方案）存档</a></p>
+</div></footer>
+
+<script>
+(function(){
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+// countdown
+const dep=new Date('2026-09-24T19:00:00+08:00');
+function tick(){const ms=dep-Date.now();const el=document.getElementById('countdown');if(ms<=0){el.textContent='出发！';return}const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);el.textContent=d+' 天 '+h+' 时 '+m+' 分'}
+tick();setInterval(tick,30000);
+// tabs
+document.querySelectorAll('.tabs[role=tablist] button[data-tab]').forEach(b=>b.addEventListener('click',()=>{const list=b.parentElement;list.querySelectorAll('button').forEach(x=>{x.setAttribute('aria-selected',x===b);const p=document.getElementById(x.dataset.tab);if(p)p.hidden=x!==b})}));
+
+// ---------- POI gallery ----------
+const POIS=[{"city": "rizhao", "name": "万平口海滨风景区", "tag": "go", "why": "日照的核心，五个门只逛 1、2、3 号门：3 号门网红打卡，2 号门海景咖啡，沿沙滩走到 5 号门太公岛。", "facts": "免费 · 各门停车场 30 分钟免费 · 下午到傍晚 · 假期 10–15 时最难停", "img": "assets/img/rizhao-wanpingkou.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:%E6%97%A5%E7%85%A7%E5%B8%82%E4%B8%87%E5%B9%B3%E5%8F%A3%E6%B5%B7%E6%B4%8B%E5%85%AC%E5%9B%AD2022.jpg\" target=\"_blank\" rel=\"noreferrer\">Iswzo</a> · CC BY-SA 4.0 · Wikimedia Commons"}, {"city": "rizhao", "name": "日照灯塔风景区", "tag": "go", "why": "9/25 傍晚的主场：17:04 月出、17:55 日落同框，灯塔亮灯；退潮时露出\"爱心海\"礁石水洼。", "facts": "免费全天 · 与万平口 1 号门相连 · 灯塔风景区停车场", "img": "assets/img/rizhao-lighthouse.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:Lighthouse_Scenic_of_Rizhao.jpg\" target=\"_blank\" rel=\"noreferrer\">风之清扬</a> · CC BY-SA 3.0 · Wikimedia Commons"}, {"city": "rizhao", "name": "阳光海岸绿道 · 太公岛", "tag": "ok", "why": "租辆电动车往北骑到 LOVE 树杈、天使翅膀；太公岛是市区最好的免费赶海点，只是 9/25 下午在涨潮。", "facts": "免费 · 电动车约 50 元/天 · 阳光海岸 2 号停车场 · 太公岛路边免费车位", "img": null, "credit": ""}, {"city": "rizhao", "name": "东夷小镇", "tag": "go", "why": "中秋夜晚饭和赏月的地方：灯笼夜景、海沙子面、烤鲅鱼、日照羊汤；假期常有打月饼、做花灯活动。", "facts": "免费 · 夜市约 18:00 起 · 距万平口 200 m · 1/2/3 号停车场 30 分钟免费", "img": null, "credit": ""}, {"city": "rizhao", "name": "海滨国家森林公园", "tag": "opt", "why": "二号门进万亩水杉林，出来是\"中国第一金滩\"，北侧沙滩人少沙细。这次时间紧可以舍，方案 B 可去。", "facts": "大门免费 · 观光车 10 元 · 距市区约 18 km · 正门大停车场", "img": "assets/img/rizhao-forest.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:Rizhao_Seaside_National_Forest_Park_-_panoramio.jpg\" target=\"_blank\" rel=\"noreferrer\">Jd Shi</a> · CC BY-SA 3.0 · Wikimedia Commons"}, {"city": "rizhao", "name": "任家台礁石公园 · 大泉沟渔港", "tag": "opt", "why": "本地博主口中的\"日落天花板\"，渔港伸进海里的船坞轨道很出片；退潮可赶海。方案 B 或时间富余再去。", "facts": "免费 · 停车 10 元/次 · 无商店无厕所 · 距万平口约 12–15 km", "img": null, "credit": ""}, {"city": "qingdao", "name": "栈桥 · 中山路 · 天主教堂", "tag": "go", "why": "老城的骨架。6 点多到栈桥人少，走到中山路吃早饭，8 点天主教堂开门。", "facts": "栈桥免费 · 天主教堂 10 元 8:00–17:00 · 3 号线青岛站 / 1 号线中山路站 · 别开车进老城", "img": "assets/img/qingdao-zhanqiao.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:Zhanqiao_pier_with_Little_Qingdao_Isle.jpg\" target=\"_blank\" rel=\"noreferrer\">K.Y.K.Z.K.</a> · CC BY-SA 4.0 · Wikimedia Commons"}, {"city": "qingdao", "name": "八大关 · 花石楼", "tag": "go", "why": "树荫、老建筑和海风，第二海水浴场就在旁边，是青岛最舒服的散步区。", "facts": "花石楼 8.5 元 · 核心区 4/1–11/30 禁社会车辆 · 停天泰体育场 / 汇泉湾 A/B/C 区", "img": "assets/img/qingdao-badaguan.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:%E9%9D%92%E5%B2%9B%E5%85%AB%E5%A4%A7%E5%85%B3%E8%8A%B1%E7%9F%B3%E6%A5%BC.jpg\" target=\"_blank\" rel=\"noreferrer\">Gisling</a> · CC BY-SA 3.0 · Wikimedia Commons"}, {"city": "qingdao", "name": "浙江路天主教堂 · 大学路 · 信号山", "tag": "ok", "why": "教堂广场拍完往东走大学路、鱼山路，信号山旋转观景楼看红瓦全景。", "facts": "信号山免费需预约 · 小鱼山免费\"魅力海滨\"预约 · 步行串联", "img": "assets/img/qingdao-cathedral.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:20240730_St._Michael%27s_Cathedral,_Qingdao_01.jpg\" target=\"_blank\" rel=\"noreferrer\">Windmemories</a> · CC BY-SA 4.0 · Wikimedia Commons"}, {"city": "qingdao", "name": "五四广场 · 奥帆中心 · 浮山湾灯光秀", "tag": "go", "why": "傍晚从五四广场走到奥帆中心情人坝，18:30 灯光秀开始，整片楼群一起亮。", "facts": "免费 · 灯光秀 9/16–10/8 每晚 18:30–22:00 · 海信广场停车 8 元/时封顶 64", "img": "assets/img/qingdao-wusi.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:51361-Qingdao_May_Fourth_Square.jpg\" target=\"_blank\" rel=\"noreferrer\">xiquinhosilva</a> · CC BY 2.0 · Wikimedia Commons"}, {"city": "qingdao", "name": "崂山仰口 · 环海公路", "tag": "go", "why": "车能直接停仰口停车场，索道 35 元上觅天洞看海；抢到环海公路名额就开进去看雕龙嘴、青山渔村。", "facts": "仰口 90 元含观光车 · 提前 0–7 天预约 · 环海公路 9/22 08:00 放号 · 7:30 前到", "img": "assets/img/qingdao-laoshan.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:DSC_6740_(10596457806).jpg\" target=\"_blank\" rel=\"noreferrer\">Ludger Heide</a> · CC BY-SA 2.0 · Wikimedia Commons"}, {"city": "qingdao", "name": "台东 · 营口路啤酒屋 · 啤酒博物馆", "tag": "ok", "why": "市场买海鲜进啤酒屋加工，一人 50–100 元；啤酒博物馆 60 元含两杯，想去要实名预约。", "facts": "2 号线台东站 / 利津路站 · 选本地客多、明码标价的店", "img": "assets/img/qingdao-beer.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:Tsingdao_Brewery.jpg\" target=\"_blank\" rel=\"noreferrer\">M. Weitzel</a> · CC BY-SA 2.5 · Wikimedia Commons"}, {"city": "qingdao", "name": "小麦岛 · 石老人海水浴场", "tag": "ok", "why": "住石老人的话，小麦岛留到黄昏走一圈；石老人浴场免费、停车 442 位，雨天备选看日出。", "facts": "免费 · 2 号线麦岛站 E 口 · 周末 10–19 点东海路麦岛段拥堵", "img": null, "credit": ""}, {"city": "weihai", "name": "猫头山 · 半月湾 · 环海路", "tag": "go", "why": "威海海景天花板：悬崖、玻璃海、S 弯公路。停半月湾北岸停车场换摆渡车，2 号、3 号、13 号观景台必下。", "facts": "免费 · 摆渡车 20 元/人 8:00–20:00 · 辅路 10/7 前禁行一切车辆", "img": "assets/img/weihai-huanhai.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-%E5%8C%97%E7%8E%AF%E6%B5%B7%E8%B7%AF-%E6%97%A5%E5%87%BA_-_panoramio.jpg\" target=\"_blank\" rel=\"noreferrer\">Nyx Ning</a> · CC BY-SA 3.0 · Wikimedia Commons"}, {"city": "weihai", "name": "海源公园 · 三连岛", "tag": "go", "why": "渔船、木栈道、一战华工纪念馆，小众又出片，还能赶海；离韩乐坊近，逛完正好晚饭。", "facts": "免费 · 导航\"威海宾馆\" · 木台阶下去有礁石区", "img": null, "credit": ""}, {"city": "weihai", "name": "火炬八街 · 国际海水浴场", "tag": "opt", "why": "\"威海小镰仓\"，4,414 赞的测评说人多靠 P。早上 7:30 前顺路拍 20 分钟即可，浴场傍晚有夜市。", "facts": "免费 · 火炬八街停车场 694 位 1 小时内免费 · 浴场周边泊位 30 分钟内免费", "img": null, "credit": ""}, {"city": "weihai", "name": "那香海 · 钻石沙滩", "tag": "ok", "why": "2.5 km 细沙，人比火炬八街少得多；旺季海水偏浑、帐篷椅子收费，散步看海刚好。", "facts": "沙滩免费 · 路南免费停车场 10 点后紧张 · 那香海景区南侧", "img": "assets/img/weihai-naxianghai.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:Naxianghai_in_Weihai_20180711.jpg\" target=\"_blank\" rel=\"noreferrer\">Sunyiming</a> · CC BY-SA 4.0 · Wikimedia Commons"}, {"city": "weihai", "name": "布鲁威斯号搁浅船", "tag": "go", "why": "整条东线的\"顶流\"，沙细海清，傍晚光线最好；很吃天气，阴天打对折。", "facts": "园区约 19.9 元起 · 荣成成山镇小五队 · 9 点后堵，车停右转那条路 · 2026-05 报道仍在", "img": null, "credit": ""}, {"city": "weihai", "name": "成山头 · 天尽头", "tag": "go", "why": "中国陆地最东端看日出，9/29 05:43。提前 1 小时入园占位，看完顺着音乐公路往回走。", "facts": "旺季 148 元 · 观光车 20 元/人 · 私家车入园 80 元/车 · 停车免费 · \"西霞口旅游\"实名预约", "img": "assets/img/weihai-chengshantou.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:%E6%88%90%E5%B1%B1%E5%A4%B4_-_panoramio_(1).jpg\" target=\"_blank\" rel=\"noreferrer\">guan</a> · CC BY 3.0 · Wikimedia Commons"}, {"city": "weihai", "name": "刘公岛", "tag": "opt", "why": "甲午战争博物馆和定远舰复刻，历史爱好者必逛，抢 8:10 首班船，留 3–4 小时。与幸福门二选一。", "facts": "122 元含往返船 · 进岛末班 16:00 · 出岛末班 17:30 · 码头停车 2,600 位", "img": "assets/img/weihai-liugongdao.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:%E7%8E%AF%E7%BF%A0_%E5%88%98%E5%85%AC%E5%B2%9B%E9%A3%8E%E6%99%AF%E5%90%8D%E8%83%9C%E5%8C%BA.jpg\" target=\"_blank\" rel=\"noreferrer\">Liuxingy</a> · CC BY-SA 4.0 · Wikimedia Commons"}, {"city": "weihai", "name": "幸福门 · 威海公园大相框", "tag": "ok", "why": "市区收尾：幸福门登顶看刘公岛，大相框在海滨中路，夕阳下带个红气球拍照。", "facts": "幸福门登顶 50 元 · 大相框免费 · 韩乐坊步行可达", "img": "assets/img/weihai-xingfumen.jpg", "credit": "图：<a href=\"https://commons.wikimedia.org/wiki/File:Gate_of_happiness_%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-_panoramio.jpg\" target=\"_blank\" rel=\"noreferrer\">Nyx Ning</a> · CC BY-SA 3.0 · Wikimedia Commons"}, {"city": "weihai", "name": "鸡鸣岛", "tag": "opt", "why": "岛很小，除了观景台和悬崖咖啡没什么可玩；抱着坐船看海的心态可去，2–3 小时。", "facts": "往返船 120 元 · 虎头角码头免费停车 · 8:30–16:00 每小时一班 · 返程末班 16:15", "img": "https://dimg04.c-ctrip.com/images/01041120008kae29qB12A_W_640_10000.jpg?proc=autoorient", "credit": "图：携程社区（外链），版权归原作者"}, {"city": "weihai", "name": "烟墩角海草房 · 彩虹公路", "tag": "ok", "why": "9 月没有天鹅，但海草房村落值得停 20 分钟；青鱼滩彩虹公路 10 km 是东线回市区的顺路段。", "facts": "免费 · 烟墩角村免费停车 · 音乐公路 800 m 限 40 km/h", "img": null, "credit": ""}];
+document.querySelectorAll('.gallery').forEach(g=>{const city=g.dataset.city;POIS.filter(p=>p.city===city).forEach(p=>{const d=document.createElement('div');d.className='poi';const img=p.img?'<img loading="lazy" src="'+p.img+'" alt="'+p.name+'" referrerpolicy="no-referrer">':'<div class="noimg"><span>'+p.name.split(' · ')[0]+'</span><small>暂无自由授权图片</small></div>';const badge={go:'<span class="badge ok">一定去</span>',ok:'<span class="badge ok">可去</span>',opt:'<span class="badge warn">可选</span>',skip:'<span class="badge bad">跳过</span>'}[p.tag]||'';d.innerHTML='<div class="ph">'+img+'</div><div class="body"><h4>'+p.name+badge+'</h4><div class="why">'+p.why+'</div><div class="facts">'+p.facts+'</div></div>'+(p.credit?'<div class="credit">'+p.credit+'</div>':'');g.appendChild(d)})});
+
+// ---------- hotels ----------
+const nights=[
+ {key:'n1',label:'9/24 日照',ci:'2026-09-24',co:'2026-09-25',city:1106,n:1},
+ {key:'n2',label:'9/25–27 青岛（2 晚）',ci:'2026-09-25',co:'2026-09-27',city:7,n:2},
+ {key:'n3',label:'9/27 威海北岸',ci:'2026-09-27',co:'2026-09-28',city:479,n:1},
+ {key:'n4',label:'9/28 荣成·那香海',ci:'2026-09-28',co:'2026-09-29',city:833,n:1},
+ {key:'n5',label:'9/29 威海市区',ci:'2026-09-29',co:'2026-09-30',city:479,n:1}
+];
+const hotels=[{"key": "n1:日照蔚蓝假日酒店(万平口风景区店)", "night": "n1", "name": "日照蔚蓝假日酒店(万平口风景区店)", "star": 4, "score": 4.7, "label": "超棒", "reviews": "2,873", "price": 256, "room": "1.8 米大床（3–4 层）", "park": "地下停车；距万平口 400 m，太公岛赶海", "rank": 2, "id": 110420041, "size": "37 ㎡", "sizeNum": 37, "priceNote": "¥217（2 层 35 ㎡无早）/ ¥256 / 含早 ¥297，18:00 前免费取消", "review": "\"太公岛赶海 | 日出阳台海景\"", "pick": true}, {"key": "n1:维也纳酒店(日照万平口东夷小镇店)", "night": "n1", "name": "维也纳酒店(日照万平口东夷小镇店)", "star": 3, "score": 4.5, "label": "很好", "reviews": "836", "price": 226, "room": "豪华大床房", "park": "距万平口海滨风景区步行720米 · 近万平口海滨风景区", "rank": 1}, {"key": "n1:日照万平口东夷小镇亚朵酒店", "night": "n1", "name": "日照万平口东夷小镇亚朵酒店", "star": 4, "score": 4.6, "label": "很好", "reviews": "1,217", "price": 262, "room": "高级大床房（封包巾类丨独立控温丨电视投屏）", "park": "距万平口海滨风景区步行1.4公里 · 近万平口海滨风景区", "rank": 3, "id": 65359498}, {"key": "n1:日照莱顿海景酒店(万平口风景区店)", "night": "n1", "name": "日照莱顿海景酒店(万平口风景区店)", "star": 4, "score": 4.4, "label": "", "reviews": "4,043", "price": 200, "room": "莱顿公寓楼｜拾光雅致大床房・厨房・冰箱・洗衣机", "park": "距万平口海滨风景区步行370米 · 近万平口海滨风景区", "rank": 4, "id": 109841855}, {"key": "n1:日照喜来登酒店", "night": "n1", "name": "日照喜来登酒店", "star": 5, "score": 4.7, "label": "超棒", "reviews": "6,155", "price": 498, "room": "霞光余晖豪华双床房", "park": "距万平口海滨风景区步行1.3公里 · 近万平口海滨风景区", "rank": 5}, {"key": "n1:锦江都城酒店(日照万平口风景区店)", "night": "n1", "name": "锦江都城酒店(日照万平口风景区店)", "star": 4, "score": 4.7, "label": "超棒", "reviews": "460", "price": 225, "room": "无障碍大床房", "park": "距万平口海滨风景区步行1.8公里 · 近万平口海滨风景区", "rank": 6}, {"key": "n1:全季酒店(日照东夷小镇万平口景区5号门店)", "night": "n1", "name": "全季酒店(日照东夷小镇万平口景区5号门店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "546", "price": 264, "room": "大床房", "park": "距万平口海滨风景区步行1.4公里 · 近万平口海滨风景区", "rank": 7}, {"key": "n1:日照万平口东夷小镇希尔顿欢朋酒店", "night": "n1", "name": "日照万平口东夷小镇希尔顿欢朋酒店", "star": 4, "score": 4.7, "label": "超棒", "reviews": "3,095", "price": 386, "room": "1.8 米大床（1–3 层）", "park": "免费停车，东夷小镇 A 岛内", "rank": 8, "id": 22763699, "size": "28–32 ㎡", "sizeNum": 30, "priceNote": "含 2 早 ¥386 不可取消 / ¥403 可取消；38 ㎡ 约 ¥430", "review": "位置最好，夜市步行；房间偏小"}, {"key": "n1:日照灯塔海景酒店(日照灯塔风景区店)", "night": "n1", "name": "日照灯塔海景酒店(日照灯塔风景区店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "3,229", "price": 198, "room": "Loft高级大床房（冰箱+洗衣机+轻智能马桶）", "park": "距万平口海滨风景区驾车2.7公里 · 近万平口海滨风景区", "rank": 9, "id": 118943366}, {"key": "n1:日照颐居酒店(万平口景区开元森泊乐园店)", "night": "n1", "name": "日照颐居酒店(万平口景区开元森泊乐园店)", "star": 4, "score": 4.6, "label": "很好", "reviews": "2,907", "price": 298, "room": "迷你大床房(裴礼康洗护+梦百合助眠枕+喜临门床垫）", "park": "距万平口海滨风景区步行530米 · 近万平口海滨风景区", "rank": 10, "id": 106248400}, {"key": "n1:汉庭日照万平口灯塔景区酒店", "night": "n1", "name": "汉庭日照万平口灯塔景区酒店", "star": 2, "score": 4.4, "label": "", "reviews": "32", "price": 222, "room": "高级大床房【内窗｜静谧休憩】", "park": "距万平口海滨风景区步行1.9公里 · 近万平口海滨风景区", "rank": 11, "id": 135488632}, {"key": "n1:日照东方尊曼酒店(万平口东夷小镇店)", "night": "n1", "name": "日照东方尊曼酒店(万平口东夷小镇店)", "star": 4, "score": 4.5, "label": "很好", "reviews": "858", "price": 238, "room": "Sunshine·海城观景双床房", "park": "距万平口海滨风景区步行880米 · 近万平口海滨风景区", "rank": 12}, {"key": "n1:如家酒店·neo(日照烟台路大学城店)", "night": "n1", "name": "如家酒店·neo(日照烟台路大学城店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "204", "price": 161, "room": "商务大床房（静谧明窗+零压床垫+55寸投屏电视）", "park": "距万平口海滨风景区驾车2.8公里 · 日照大学城", "rank": 13}, {"key": "n1:宜必思尚品酒店(日照万平口灯塔景区店)", "night": "n1", "name": "宜必思尚品酒店(日照万平口灯塔景区店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "837", "price": 350, "room": "海景双床房（90°海景+枕海而居+75寸电视投屏）", "park": "距灯塔风景区步行<100米 · 近万平口海滨风景区", "rank": 14}, {"key": "n1:星程酒店(日照万平口灯塔景区店)", "night": "n1", "name": "星程酒店(日照万平口灯塔景区店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "1,138", "price": 350, "room": "海景双床房（窗景万平口海景、世帆船景）", "park": "距灯塔风景区步行<100米 · 近灯塔风景区", "rank": 15}, {"key": "n1:全季酒店(日照万平口灯塔景区店)", "night": "n1", "name": "全季酒店(日照万平口灯塔景区店)", "star": 3, "score": 4.3, "label": "", "reviews": "37", "price": 324, "room": "商务大床房（独立小冰箱+电视投屏+智能客控）", "park": "距灯塔风景区步行440米 · 近万平口海滨风景区", "rank": 16}, {"key": "n1:日照大酒店(万平口灯塔景区店)", "night": "n1", "name": "日照大酒店(万平口灯塔景区店)", "star": 4, "score": 4.1, "label": "", "reviews": "1,398", "price": 229, "room": "舒适双床房（独立阳台+小冰箱）", "park": "距灯塔风景区步行520米 · 近万平口海滨风景区", "rank": 17}, {"key": "n1:伴海居海景民宿(日照万平口灯塔广场店)", "night": "n1", "name": "伴海居海景民宿(日照万平口灯塔广场店)", "star": 2, "score": 4.7, "label": "超棒", "reviews": "530", "price": 140, "room": "「梦海」独享一居亲子套房(地暖+配备洗衣机+冰箱+烹饪厨房+中央空调)", "park": "距灯塔风景区步行120米 · 近灯塔风景区", "rank": 18}, {"key": "n1:日照站海滨五路亚朵酒店", "night": "n1", "name": "日照站海滨五路亚朵酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "1,190", "price": 313, "room": "高级大床房", "park": "距灯塔风景区驾车3.5公里 · 近日照站", "rank": 19, "id": 122389508}, {"key": "n1:铭诚时代酒店(日照万平口景区日照站店)", "night": "n1", "name": "铭诚时代酒店(日照万平口景区日照站店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "100", "price": 149, "room": "高级大床房（智能马桶+零压床垫）", "park": "距灯塔风景区步行1.6公里 · 近万平口海滨风景区", "rank": 20}, {"key": "n1:如家精选酒店(日照高铁站万平口景区店)", "night": "n1", "name": "如家精选酒店(日照高铁站万平口景区店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "411", "price": 154, "room": "商务大床房（全屋智能）", "park": "距灯塔风景区步行1.7公里 · 近万平口海滨风景区", "rank": 21}, {"key": "n1:日照万平口希尔顿惠庭酒店", "night": "n1", "name": "日照万平口希尔顿惠庭酒店", "star": 4, "score": 4.7, "label": "", "reviews": "", "price": 340, "rank": 122, "id": 121291718, "room": "1.8 米大床（8–14 层）", "size": "36 ㎡", "sizeNum": 36, "priceNote": "¥340 无早可取消 / ¥367 含早；30 ㎡ ¥313", "park": "万达广场旁，五莲路 399 号高层", "review": "新酒店，离海约 1 km"}, {"key": "n1:日照璞悦致雅海景酒店(日照万平口景区万达广场店)", "night": "n1", "name": "日照璞悦致雅海景酒店(日照万平口景区万达广场店)", "star": 4, "score": 4.8, "label": "", "reviews": "", "price": 332, "rank": 123, "id": 121109494, "room": "2 米特大床（16–18 层）", "size": "35–37 ㎡", "sizeNum": 36, "priceNote": "¥332 无早；27 ㎡ 大床 ¥231", "park": "五莲路 399 号高层", "review": "评分最高，高层看海"}, {"key": "n1:全季酒店(日照市政府华润万象汇店)", "night": "n1", "name": "全季酒店(日照市政府华润万象汇店)", "id": 110521103, "star": 3, "score": 4.8, "label": "超棒", "reviews": "735", "price": 266, "room": "", "park": "近万平口海滨风景区 · 华润万象汇", "rank": 128}, {"key": "n1:乔治莫兰迪酒店(日照万象汇万平口景区店)", "night": "n1", "name": "乔治莫兰迪酒店(日照万象汇万平口景区店)", "id": 120257649, "star": 4, "score": 4.7, "label": "超棒", "reviews": "1237", "price": 285, "room": "", "park": "近万平口海滨风景区 · 华润万象汇", "rank": 129}, {"key": "n2:青岛证大喜玛拉雅酒店(石老人海水浴场国信体育中心店)", "night": "n2", "name": "青岛证大喜玛拉雅酒店(石老人海水浴场国信体育中心店)", "star": 5, "score": 4.5, "label": "很好", "reviews": "4,037", "price": 481, "room": "1.8 米大床（6–10 层）", "park": "崂山区同安路 880 号，自有停车场；2 号线石老人浴场站", "rank": 54, "id": 791367, "size": "38 ㎡", "sizeNum": 38, "priceNote": "¥481/晚均，9/24 12:00 前免费取消；2.4 米特大床 ¥528", "review": "房大条件好，去仰口 30 分钟，顺路威海", "pick": true}, {"key": "n2:如家·neo(青岛香港东路石老人海水浴场店)", "night": "n2", "name": "如家·neo(青岛香港东路石老人海水浴场店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "180", "price": 372, "room": "大床房（徕芬吹风机+梦百合床垫+电视投屏）", "park": "距石老人步行250米 · 近石老人", "rank": 22}, {"key": "n2:亚朵X酒店(青岛石老人海水浴场会展中心地铁站店)", "night": "n2", "name": "亚朵X酒店(青岛石老人海水浴场会展中心地铁站店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "1,862", "price": 393, "room": "精选大床房", "park": "距石老人步行1.4公里 · 近石老人海水浴场", "rank": 23, "id": 83118784}, {"key": "n2:如家商旅酒店(青岛石老人观光园店)", "night": "n2", "name": "如家商旅酒店(青岛石老人观光园店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "435", "price": 336, "room": "商务大床房A（徕芬吹风机+梦百合床垫+电视投屏）", "park": "距石老人步行570米 · 近石老人", "rank": 24}, {"key": "n2:桔子酒店(青岛金狮广场石老人海水浴场店)", "night": "n2", "name": "桔子酒店(青岛金狮广场石老人海水浴场店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "51", "price": 418, "room": "高级大床房A（65寸投屏-全屋智能-小冰箱）", "park": "距石老人步行1公里 · 近石老人海水浴场", "rank": 25}, {"key": "n2:全季酒店(青岛石老人海水浴场会展中心地铁站店)", "night": "n2", "name": "全季酒店(青岛石老人海水浴场会展中心地铁站店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "230", "price": 480, "room": "商务大床房（M3记忆枕+智能客控+好眠床垫）", "park": "距石老人步行1.4公里 · 近石老人海水浴场", "rank": 26}, {"key": "n2:青岛石老人海水浴场海尔路亚朵酒店", "night": "n2", "name": "青岛石老人海水浴场海尔路亚朵酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "325", "price": 733, "room": "1.8 米大床（15–21 层）", "park": "海尔路 65 号，高层新店", "rank": 27, "id": 134864196, "size": "32 ㎡", "sizeNum": 32, "priceNote": "¥733/晚均；27–30 ㎡ ¥702", "review": "评分高但假期价贵"}, {"key": "n2:青岛海天金融中心酒店(石老人海水浴场国信体育中心店)", "night": "n2", "name": "青岛海天金融中心酒店(石老人海水浴场国信体育中心店)", "star": 5, "score": 4.7, "label": "超棒", "reviews": "11,649", "price": 460, "room": "高级双床房", "park": "距石老人步行1.5公里 · 近石老人海水浴场", "rank": 28}, {"key": "n2:全季酒店(青岛崂山石老人海水浴场店)", "night": "n2", "name": "全季酒店(青岛崂山石老人海水浴场店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "1,092", "price": 409, "room": "高级大床房A（M3记忆枕+65寸电视投屏+小冰箱）", "park": "距石老人步行1.4公里 · 近石老人海水浴场", "rank": 29}, {"key": "n2:青岛山港凯悦酒店", "night": "n2", "name": "青岛山港凯悦酒店", "star": 5, "score": 4.7, "label": "超棒", "reviews": "8,293", "price": 1088, "room": "凯悦大床房", "park": "距石老人驾车1.9公里 · 近石老人海水浴场", "rank": 30}, {"key": "n2:青岛海天大剧院酒店(国际会展中心石老人海水浴场店)", "night": "n2", "name": "青岛海天大剧院酒店(国际会展中心石老人海水浴场店)", "star": 4, "score": 4.7, "label": "超棒", "reviews": "5,500", "price": 369, "room": "标准大床房", "park": "距石老人步行470米 · 近石老人海水浴场", "rank": 31}, {"key": "n2:青岛石老人海水浴场极地海洋公园海景美仑酒店", "night": "n2", "name": "青岛石老人海水浴场极地海洋公园海景美仑酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "1,475", "price": 492, "room": "高级大床房（庭院景+小冰箱+电视投屏）", "park": "距海合安青岛极地海洋公园步行1.2公里 · 近海合安青岛极地海洋公园", "rank": 32}, {"key": "n2:极地1号酒店(青岛极地海洋世界小麦岛店)", "night": "n2", "name": "极地1号酒店(青岛极地海洋世界小麦岛店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "425", "price": 289, "room": "经济无窗大床房", "park": "距海合安青岛极地海洋公园步行<100米 · 近海合安青岛极地海洋公园", "rank": 33}, {"key": "n2:胜利金岛酒店(极地海洋世界小麦岛公园店)", "night": "n2", "name": "胜利金岛酒店(极地海洋世界小麦岛公园店)", "star": 3, "score": 4.4, "label": "", "reviews": "750", "price": 278, "room": "悦静大床房", "park": "距海合安青岛极地海洋公园步行150米 · 近海合安青岛极地海洋公园", "rank": 34}, {"key": "n2:如家商旅酒店(青岛小麦岛青岛大学店)", "night": "n2", "name": "如家商旅酒店(青岛小麦岛青岛大学店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "1,294", "price": 281, "room": "双床房（偕行雅居）", "park": "距海合安青岛极地海洋公园步行1.6公里 · 近海合安青岛极地海洋公园", "rank": 35}, {"key": "n2:青岛世纪文华酒店(极地海洋公园海川路地铁站店)", "night": "n2", "name": "青岛世纪文华酒店(极地海洋公园海川路地铁站店)", "star": 3, "score": 4.4, "label": "", "reviews": "397", "price": 195, "room": "迷你房", "park": "距海合安青岛极地海洋公园步行620米 · 近海合安青岛极地海洋公园", "rank": 36}, {"key": "n2:小船酒店(青岛极地海洋世界店)", "night": "n2", "name": "小船酒店(青岛极地海洋世界店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "235", "price": 470, "room": "海景大床房", "park": "距海合安青岛极地海洋公园步行<100米 · 近海合安青岛极地海洋公园", "rank": 37}, {"key": "n2:青岛U酒店", "night": "n2", "name": "青岛U酒店", "star": 4, "score": 4.7, "label": "超棒", "reviews": "920", "price": 618, "room": "惊喜优选大床房", "park": "距海合安青岛极地海洋公园步行<100米 · 近海合安青岛极地海洋公园", "rank": 38}, {"key": "n2:全季酒店(青岛五四广场银川西路店)", "night": "n2", "name": "全季酒店(青岛五四广场银川西路店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "1,070", "price": 443, "room": "高级大床房（智能客控+65寸电视投屏+舒压床品）", "park": "距海合安青岛极地海洋公园驾车5.7公里 · 近青岛大学(浮山校区)", "rank": 39, "id": 123840353}, {"key": "n2:春风十里海景客栈(青岛极地海洋世界店)", "night": "n2", "name": "春风十里海景客栈(青岛极地海洋世界店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "282", "price": 504, "room": "梦境·落地海景大床+智能马桶+一次性高奢洗护+投影", "park": "距海合安青岛极地海洋公园步行<100米 · 近海合安青岛极地海洋公园", "rank": 40}, {"key": "n2:青岛五四广场小麦岛海景亚朵酒店", "night": "n2", "name": "青岛五四广场小麦岛海景亚朵酒店", "star": 4, "score": 4.7, "label": "超棒", "reviews": "4,535", "price": 751, "room": "几木大床房（小冰箱+深睡枕Pro+智能客控）", "park": "距海合安青岛极地海洋公园驾车1.9公里 · 近小麦岛公园", "rank": 41}, {"key": "n2:青岛五四广场海景美仑美奂酒店", "night": "n2", "name": "青岛五四广场海景美仑美奂酒店", "star": 5, "score": 4.6, "label": "很好", "reviews": "3,857", "price": 920, "room": "商务大床房", "park": "距五四广场步行530米 · 近五四广场", "rank": 42, "id": 129704604}, {"key": "n2:全季酒店(青岛五四广场山东路店)", "night": "n2", "name": "全季酒店(青岛五四广场山东路店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "276", "price": 435, "room": "商务大床房（智能客控+保鲜冰箱+M3记忆枕）", "park": "距五四广场步行2公里 · 近五四广场", "rank": 43}, {"key": "n2:汉庭酒店(青岛五四广场南京路店)", "night": "n2", "name": "汉庭酒店(青岛五四广场南京路店)", "star": 2, "score": 4.6, "label": "很好", "reviews": "943", "price": 382, "room": "大床房（电视投屏）", "park": "距五四广场步行1.7公里 · 近青岛万象城", "rank": 44}, {"key": "n2:青岛五四广场海景桔子水晶酒店", "night": "n2", "name": "青岛五四广场海景桔子水晶酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "5,876", "price": 699, "room": "大床房", "park": "距五四广场步行600米 · 近五四广场", "rank": 45, "id": 1371788}, {"key": "n2:全季酒店(青岛五四广场店)", "night": "n2", "name": "全季酒店(青岛五四广场店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "2,020", "price": 640, "room": "高级大床（投屏电视+小冰箱+香薰加湿器）", "park": "距五四广场步行730米 · 近五月的风", "rank": 46}, {"key": "n2:桔子酒店(青岛五四广场店)", "night": "n2", "name": "桔子酒店(青岛五四广场店)", "star": 3, "score": 4.5, "label": "很好", "reviews": "1,923", "price": 460, "room": "大床房（隐逸静眠+赏霓虹灯光+55寸电视+小冰箱）", "park": "距五四广场步行550米 · 近云霄路美食街区(香港中路店)", "rank": 47}, {"key": "n2:格林豪泰智选酒店(青岛五四广场银座商城店)", "night": "n2", "name": "格林豪泰智选酒店(青岛五四广场银座商城店)", "star": 2, "score": 4.4, "label": "", "reviews": "128", "price": 285, "room": "双床房", "park": "距五四广场步行1.1公里 · 近五四广场", "rank": 48}, {"key": "n2:全季酒店(五四广场青岛市政府店)", "night": "n2", "name": "全季酒店(五四广场青岛市政府店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "537", "price": 509, "room": "高级大床房（65寸电视投屏+小冰箱+深睡枕）", "park": "距五四广场步行1.3公里 · 近云霄路美食街区(香港中路店)", "rank": 49}, {"key": "n2:和颐至尚酒店(青岛山东路中央商务区万达广场店)", "night": "n2", "name": "和颐至尚酒店(青岛山东路中央商务区万达广场店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "1,011", "price": 263, "room": "商务大床房A（榻榻米+投影）", "park": "距五四广场驾车3.8公里 · 新都心凯德Mall/中央商务区", "rank": 50}, {"key": "n2:青岛府新大厦", "night": "n2", "name": "青岛府新大厦", "star": 4, "score": 4.7, "label": "超棒", "reviews": "4,559", "price": 432, "room": "悦享双床房•享静谧丨朝霞染窗", "park": "距五四广场步行1公里 · 近五四广场", "rank": 51, "id": 455485}, {"key": "n2:青岛中心假日酒店", "night": "n2", "name": "青岛中心假日酒店", "star": 5, "score": 4.7, "label": "超棒", "reviews": "4,499", "price": 536, "room": "假日高级房-超大床", "park": "距五四广场步行1公里 · 近五四广场", "rank": 52}, {"key": "n2:7天连锁酒店(青岛国际会展中心株洲路店)", "night": "n2", "name": "7天连锁酒店(青岛国际会展中心株洲路店)", "star": 2, "score": 4.5, "label": "很好", "reviews": "217", "price": 167, "room": "标准大床房", "park": "距离区域中心驾车5.1公里 · 近崂山万象汇", "rank": 53}, {"key": "n2:全季酒店(青岛国信体育中心万象汇店)", "night": "n2", "name": "全季酒店(青岛国信体育中心万象汇店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "541", "price": 414, "room": "舒睡大床房（M3记忆枕+65寸电视智能投屏+小冰箱）", "park": "距离区域中心驾车2.6公里 · 近崂山万象汇", "rank": 55}, {"key": "n2:智扬商务宾馆(青岛中国海洋大学崂山校区店)", "night": "n2", "name": "智扬商务宾馆(青岛中国海洋大学崂山校区店)", "star": null, "score": 4.7, "label": "超棒", "reviews": "137", "price": 276, "room": "标准大床房", "park": "距离区域中心驾车9.8公里 · 近中国海洋大学(崂山校区)", "rank": 56}, {"key": "n2:沃德酒店(青岛石老人海水浴场国际会展中心店)", "night": "n2", "name": "沃德酒店(青岛石老人海水浴场国际会展中心店)", "star": 4, "score": 4.6, "label": "很好", "reviews": "2,059", "price": 351, "room": "商务双床房（空气净化器+彼得罗夫洗护+希丁床垫）", "park": "距离区域中心步行1.2公里 · 近石老人海水浴场", "rank": 57}, {"key": "n2:青岛国信体育中心酒店(石老人海水浴场店)", "night": "n2", "name": "青岛国信体育中心酒店(石老人海水浴场店)", "star": 4, "score": 4.8, "label": "超棒", "reviews": "5,294", "price": 456, "room": "高级湖景双床房（小度智能客控）", "park": "距离区域中心驾车2.8公里 · 近青岛体育中心", "rank": 58}, {"key": "n2:绿峰雅阁度假公寓(青岛会展中心店)", "night": "n2", "name": "绿峰雅阁度假公寓(青岛会展中心店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "1,877", "price": 258, "room": "市景大床房（冰箱+洗衣机+微波炉+干湿分离）", "park": "距离区域中心步行1.1公里 · 近石老人海水浴场", "rank": 59}, {"key": "n2:青岛丽天大酒店(五四广场店)", "night": "n2", "name": "青岛丽天大酒店(五四广场店)", "star": 4, "score": 4.8, "label": "", "reviews": "", "price": 453, "rank": 124, "id": 654770, "room": "1.8 米大床", "size": "25 ㎡", "sizeNum": 25, "priceNote": "¥453/晚均；高层 ¥480", "park": "市南香港西路 87 号，市南一类区停车 60 元/天", "review": "口碑最好，但房小、老城开车难"}, {"key": "n2:青岛海景花园大酒店", "night": "n2", "name": "青岛海景花园大酒店", "star": 5, "score": null, "label": "", "reviews": "", "price": 3032, "rank": 125, "id": 467216, "room": "2 米特大床", "size": "81 ㎡", "sizeNum": 81, "priceNote": "¥3,032/晚均 含 2 早（顶配参考）", "park": "市南彰化路 2 号，花园式", "review": "青岛老牌顶级，仅作参考"}, {"key": "n2:晨枫高空观景设计师酒店(青岛火炬路方特梦幻王国店)", "night": "n2", "name": "晨枫高空观景设计师酒店(青岛火炬路方特梦幻王国店)", "id": 121094046, "star": 4, "score": 4.6, "label": "很好", "reviews": "723", "price": 276, "room": "", "park": "近东方伊甸园 · 青岛市民健身中心-体育馆", "rank": 130}, {"key": "n2:青岛北站振华路亚朵酒店", "night": "n2", "name": "青岛北站振华路亚朵酒店", "id": 116713283, "star": 4, "score": 4.9, "label": "超棒", "reviews": "7430", "price": 389, "room": "", "park": "近青岛北站 · 李村步行街", "rank": 131}, {"key": "n2:全季酒店(青岛南京路新都心店)", "night": "n2", "name": "全季酒店(青岛南京路新都心店)", "id": 129399329, "star": 3, "score": 4.8, "label": "超棒", "reviews": "429", "price": 353, "room": "", "park": "近清江路地铁站 · 青岛理工大学(市北校区)", "rank": 132}, {"key": "n2:全季酒店(青岛金沙滩店)", "night": "n2", "name": "全季酒店(青岛金沙滩店)", "id": 44154636, "star": 3, "score": 4.6, "label": "很好", "reviews": "649", "price": 302, "room": "", "park": "近薛家岛地铁站 · 黄岛金沙滩", "rank": 133}, {"key": "n2:青岛北站重庆中路亚朵酒店", "night": "n2", "name": "青岛北站重庆中路亚朵酒店", "id": 94037910, "star": 4, "score": 4.8, "label": "超棒", "reviews": "2257", "price": 350, "room": "", "park": "近青岛北站 · 李村步行街", "rank": 134}, {"key": "n2:全季酒店(青岛山东路中央商务区店)", "night": "n2", "name": "全季酒店(青岛山东路中央商务区店)", "id": 119264637, "star": 3, "score": 4.9, "label": "超棒", "reviews": "1871", "price": 458, "room": "", "park": "近万达广场(延吉路店) · 台东步行街", "rank": 135}, {"key": "n3:半岛·观澜酒店(威海国际海水浴场火炬八街店)", "night": "n3", "name": "半岛·观澜酒店(威海国际海水浴场火炬八街店)", "star": 4, "score": 4.7, "label": "超棒", "reviews": "1,608", "price": 249, "room": "2 米特大床（2–4 层）", "park": "文化西路一线海景新楼，浴场步行", "rank": 68, "id": 125329818, "size": "30 ㎡", "sizeNum": 30, "priceNote": "¥249 无早 / ¥275 含早，18:00 前免费取消", "review": "\"房间宽敞明亮\"，性价比最高", "pick": true}, {"key": "n3:全季酒店(威海山东大学海水浴场店)", "night": "n3", "name": "全季酒店(威海山东大学海水浴场店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "1,563", "price": 378, "room": "高级大床房（智能客控+65英寸电视投屏+拾趣茶具）", "park": "距离区域中心步行760米 · 近火炬八街", "rank": 60, "id": 99828210}, {"key": "n3:沃德酒店(威海国际海水浴场火炬八街店)", "night": "n3", "name": "沃德酒店(威海国际海水浴场火炬八街店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "2,814", "price": 225, "room": "商务大床房", "park": "距离区域中心步行220米 · 近威海国际海水浴场", "rank": 61}, {"key": "n3:威海国际海景城酒店(国际海水浴场火炬八街店)", "night": "n3", "name": "威海国际海景城酒店(国际海水浴场火炬八街店)", "star": 3, "score": 4.5, "label": "很好", "reviews": "1,446", "price": 210, "room": "林景双床房（松林市景+阳光充足+零压床垫枕头）", "park": "距离区域中心步行740米 · 近威海国际海水浴场", "rank": 62}, {"key": "n3:威海火炬八街山东大学亚朵酒店", "night": "n3", "name": "威海火炬八街山东大学亚朵酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "1,651", "price": 588, "room": "1.8 米大床（大房型）", "park": "火炬路 162 号，自有停车", "rank": 63, "id": 128123675, "size": "35–40 ㎡", "sizeNum": 35, "priceNote": "¥588；25–30 ㎡ ¥420", "review": "新、评分高"}, {"key": "n3:威海海景壹号度假酒店(国际海水浴场火炬八街店)", "night": "n3", "name": "威海海景壹号度假酒店(国际海水浴场火炬八街店)", "star": 2, "score": 4.7, "label": "超棒", "reviews": "3,528", "price": 177, "room": "林景天然氧吧大床房", "park": "距离区域中心步行1.6公里 · 近火炬八街", "rank": 64}, {"key": "n3:威海火炬八街国际海水浴场希尔顿欢朋酒店", "night": "n3", "name": "威海火炬八街国际海水浴场希尔顿欢朋酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "861", "price": 428, "room": "舒适房-双床", "park": "距离区域中心驾车2公里 · 近火炬八街", "rank": 65}, {"key": "n3:威海云水遥海景度假公寓(国际海水浴场火炬八街店)", "night": "n3", "name": "威海云水遥海景度假公寓(国际海水浴场火炬八街店)", "star": 2, "score": 4.9, "label": "超棒", "reviews": "76", "price": 281, "room": "素木观城【俯瞰山大＋百寸投影＋深睡床垫】", "park": "距离区域中心步行440米 · 近威海国际海水浴场", "rank": 66}, {"key": "n3:梧桐民宿(威海国际海水浴场火炬八街店)", "night": "n3", "name": "梧桐民宿(威海国际海水浴场火炬八街店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "3,044", "price": 176, "room": "阳光.林景大床房（阳光充足+干湿分离+万亩黑松林景）", "park": "距离区域中心步行1.6公里 · 近威海国际海水浴场", "rank": 67, "id": 49407522}, {"key": "n3:桔子酒店(威海火炬八街国际海水浴场店)", "night": "n3", "name": "桔子酒店(威海火炬八街国际海水浴场店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "1,010", "price": 366, "room": "豪华大床房（65寸电视投屏+小冰箱+智能马桶）", "park": "距离区域中心步行1公里 · 近威海国际海水浴场", "rank": 69}, {"key": "n3:伴月湾6号酒店(半月湾沙滩店)", "night": "n3", "name": "伴月湾6号酒店(半月湾沙滩店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "1,090", "price": 223, "room": "标准大床房（带独享露台+空调开放）", "park": "距半月湾步行490米 · 近半月湾沙滩", "rank": 70}, {"key": "n3:威海山海云汀酒店(半月湾猫头山店)", "night": "n3", "name": "威海山海云汀酒店(半月湾猫头山店)", "star": 4, "score": 4.9, "label": "超棒", "reviews": "2,145", "price": 342, "room": "山海-高级大床房-智能客控", "park": "距半月湾步行230米 · 近半月湾沙滩", "rank": 71}, {"key": "n3:初日·Sunrise海景民宿(半月湾沙滩环海路店)", "night": "n3", "name": "初日·Sunrise海景民宿(半月湾沙滩环海路店)", "star": 3, "score": 4.6, "label": "很好", "reviews": "773", "price": 262, "room": "市景舒适双大床房-C栋-零压舒睡-65寸4K影音电视", "park": "距半月湾步行630米 · 近半月湾沙滩", "rank": 72}, {"key": "n3:Sunshine酒店(威海半月湾沙滩店)", "night": "n3", "name": "Sunshine酒店(威海半月湾沙滩店)", "star": null, "score": 4.9, "label": "超棒", "reviews": "266", "price": 197, "room": "园景双床房", "park": "距半月湾步行120米 · 近半月湾沙滩", "rank": 73}, {"key": "n3:威海名兰假日大酒店(半月湾沙滩店)", "night": "n3", "name": "威海名兰假日大酒店(半月湾沙滩店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "138", "price": 226, "room": "雅致双床房(65寸电视投屏+轻智能客控+智能马桶）", "park": "距半月湾步行640米 · 近半月湾沙滩", "rank": 74}, {"key": "n3:威海市区威高广场亚朵酒店", "night": "n3", "name": "威海市区威高广场亚朵酒店", "star": 4, "score": 4.7, "label": "超棒", "reviews": "1,067", "price": 330, "room": "高级双床房（全屋智能+65寸电视投屏+深睡体验）", "park": "距半月湾驾车4.3公里 · 近威高广场步行街", "rank": 75, "id": 535463}, {"key": "n3:威海合庆湾太空舱 Sunrise Pod民宿(半月湾店)", "night": "n3", "name": "威海合庆湾太空舱 Sunrise Pod民宿(半月湾店)", "star": 2, "score": 4.9, "label": "超棒", "reviews": "228", "price": 892, "room": "180°一线海景亲子房（智能客控+投影+冰箱+星空顶）", "park": "距半月湾步行1.3公里 · 近半月湾沙滩", "rank": 76}, {"key": "n3:MANNA·日出印象·漫哪民宿(半月湾店)", "night": "n3", "name": "MANNA·日出印象·漫哪民宿(半月湾店)", "star": 3, "score": 4.9, "label": "超棒", "reviews": "181", "price": 696, "room": "简美一线海景露台大床房【4号】-地暖-看日出", "park": "距半月湾步行640米 · 近半月湾沙滩", "rank": 77}, {"key": "n3:这有海·TheSea日出海景酒店(威海半月湾海水浴场店)", "night": "n3", "name": "这有海·TheSea日出海景酒店(威海半月湾海水浴场店)", "star": 3, "score": 4.3, "label": "", "reviews": "1,550", "price": 156, "room": "治愈影音大床房（零压床垫+小冰箱+minibar）", "park": "距半月湾步行780米 · 近半月湾沙滩", "rank": 78}, {"key": "n3:威海东山宾馆", "night": "n3", "name": "威海东山宾馆", "star": 4, "score": 4.7, "label": "超棒", "reviews": "3,104", "price": 503, "room": "1.8 米大床（4–7 层）", "park": "东山路 26 号，小环海路起点，海源公园旁", "rank": 79, "id": 1714962, "size": "30–40 ㎡", "sizeNum": 30, "priceNote": "¥503（仅剩 1 间）；双床 24 ㎡ ¥432", "review": "位置无敌，房型偏老"}, {"key": "n3:麗枫酒店(威海国际海水浴场火炬八街店)", "night": "n3", "name": "麗枫酒店(威海国际海水浴场火炬八街店)", "id": 85557551, "star": 3, "score": 4.6, "label": "很好", "reviews": "2836", "price": 269, "room": "", "park": "近山东大学(威海校区) · 哈尔滨工业大学(威海校区)", "rank": 136}, {"key": "n3:威海碧海蓝湾酒店(火炬八街国际海水浴场店)", "night": "n3", "name": "威海碧海蓝湾酒店(火炬八街国际海水浴场店)", "id": 121063182, "star": 3, "score": 4.6, "label": "很好", "reviews": "1159", "price": 204, "room": "", "park": "近火炬八街 · 威海国际海水浴场", "rank": 137}, {"key": "n4:威海荣成金悦海景花园酒店", "night": "n4", "name": "威海荣成金悦海景花园酒店", "star": 5, "score": 4.4, "label": "", "reviews": "60", "price": 387, "room": "2.2 米特大床", "park": "环海路 5588 号，私人停车场免费", "rank": 85, "id": 135209725, "size": "43 ㎡", "sizeNum": 43, "priceNote": "含 2 早 ¥387；38 ㎡ 大床 ¥448，18:00 前免费取消", "review": "2025 新店，房最大，评价样本少", "pick": true}, {"key": "n4:威海荣成小鱼民宿(那香海景区店)", "night": "n4", "name": "威海荣成小鱼民宿(那香海景区店)", "star": 2, "score": 4.7, "label": "超棒", "reviews": "340", "price": 125, "room": "云汐·温馨园景大床房【观景阳台+洗衣机+私人厨房】", "park": "距那香海景区步行450米 · 近那香海景区", "rank": 80}, {"key": "n4:威海荣成香海温德姆花园酒店", "night": "n4", "name": "威海荣成香海温德姆花园酒店", "star": 5, "score": 4.4, "label": "", "reviews": "2,756", "price": 748, "room": "2 米特大床（10–16 层）", "park": "那香海 C 位，看日出日落", "rank": 81, "id": 119242329, "size": "35 ㎡", "sizeNum": 35, "priceNote": "¥748 无早 / ¥907 含早", "review": "贵，评分一般"}, {"key": "n4:威海荣成国信东方度假酒店(那香海店)", "night": "n4", "name": "威海荣成国信东方度假酒店(那香海店)", "star": 4, "score": 4.5, "label": "很好", "reviews": "1,363", "price": 608, "room": "1.8 米大床（2–5 层）", "park": "环海路 5188 号，距海 50 m，泳池、免费停车", "rank": 82, "id": 109113988, "size": "30–32 ㎡", "sizeNum": 30, "priceNote": "含 2 早 ¥608；28–30 ㎡ ¥405 无早 / ¥481 含早", "review": "那香海最稳妥的度假酒店"}, {"key": "n4:威海香海豪生度假酒店", "night": "n4", "name": "威海香海豪生度假酒店", "star": 5, "score": 4.4, "label": "", "reviews": "2,670", "price": 588, "room": "2 米特大床（7–13 层）", "park": "临钻石沙滩，公共停车场免费", "rank": 83, "id": 16924132, "size": "37 ㎡", "sizeNum": 37, "priceNote": "¥588 无早；40 ㎡ 含早 ¥716", "review": "老牌度假，硬件一般"}, {"key": "n4:荣成金澜湾海景酒店(那香海店)", "night": "n4", "name": "荣成金澜湾海景酒店(那香海店)", "star": 4, "score": 4.4, "label": "", "reviews": "103", "price": 341, "room": "舒适别墅大床房", "park": "距那香海景区步行1.1公里 · 近那香海景区", "rank": 84, "id": 135353327}, {"key": "n4:丽呈東谷酒店(威海荣成好运角店)", "night": "n4", "name": "丽呈東谷酒店(威海荣成好运角店)", "star": 4, "score": 4.4, "label": "", "reviews": "575", "price": 267, "room": "高级大床房【落地窗+裸眠床品&记忆枕+舒适睡眠】", "park": "距那香海景区驾车2.4公里 · 近那香海景区", "rank": 86}, {"key": "n4:威澜时光海景民宿(那香海店)", "night": "n4", "name": "威澜时光海景民宿(那香海店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "883", "price": 213, "room": "哆啦A梦·悦享家庭三人间", "park": "距那香海景区步行280米 · 近那香海景区", "rank": 87}, {"key": "n4:好来屋·HoIIywood海景度假民宿(那香海景区钻石沙滩浴场店)", "night": "n4", "name": "好来屋·HoIIywood海景度假民宿(那香海景区钻石沙滩浴场店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "118", "price": 112, "room": "Lucky·湖景大床房·摩天轮夜景·网红蓝桥·高层景观", "park": "距那香海景区步行560米 · 近那香海景区", "rank": 88}, {"key": "n4:奶爸爸度假公寓(那香海景区钻石沙滩浴场店)", "night": "n4", "name": "奶爸爸度假公寓(那香海景区钻石沙滩浴场店)", "star": 2, "score": 4.7, "label": "超棒", "reviews": "976", "price": 115, "room": "湖景双大床（4人）房", "park": "距那香海景区步行810米 · 近那香海景区", "rank": 89}, {"key": "n4:海伦纳酒店(那香海店)", "night": "n4", "name": "海伦纳酒店(那香海店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "46", "price": 477, "room": "中古风温馨大床房", "park": "距那香海景区步行210米 · 近那香海景区", "rank": 90}, {"key": "n4:威海梵克豪美花园酒店", "night": "n4", "name": "威海梵克豪美花园酒店", "star": 3, "score": 4.5, "label": "很好", "reviews": "819", "price": 256, "room": "睡到自然醒｜舒眠双床房（办公桌+55寸高清电视）", "park": "距成山头风景名胜区步行1公里 · 近西霞口神雕山野生动物园", "rank": 91}, {"key": "n4:三梦季·海景花园度假酒店", "night": "n4", "name": "三梦季·海景花园度假酒店", "star": 3, "score": 4.5, "label": "很好", "reviews": "1,067", "price": 279, "room": "花园浴缸大床房(静谧舒睡+特大床+深泡浴缸)", "park": "距成山头风景名胜区驾车2.3公里 · 近西霞口神雕山野生动物园", "rank": 92}, {"key": "n4:威海荣成东海金沙滩精品酒店", "night": "n4", "name": "威海荣成东海金沙滩精品酒店", "star": 2, "score": 4.6, "label": "很好", "reviews": "172", "price": 225, "room": "特惠海景家庭房", "park": "距成山头风景名胜区步行1.1公里 · 近成山头风景名胜区", "rank": 93}, {"key": "n4:三梦季·落日海港汤池度假美宿", "night": "n4", "name": "三梦季·落日海港汤池度假美宿", "star": 4, "score": 4.3, "label": "", "reviews": "531", "price": 288, "room": "园景双床房(静谧舒睡+零压床垫+除湿机)", "park": "距成山头风景名胜区驾车2.3公里 · 近西霞口神雕山野生动物园", "rank": 94}, {"key": "n4:威海荣成海边里度假酒店(西霞口动物园店)", "night": "n4", "name": "威海荣成海边里度假酒店(西霞口动物园店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "513", "price": 180, "room": "臻享暖居双床房（加宽双床+干湿分离）", "park": "距成山头风景名胜区步行1.2公里 · 近西霞口神雕山野生动物园", "rank": 95}, {"key": "n4:荣成凤栖海岸假日酒店(西霞口动物园店)", "night": "n4", "name": "荣成凤栖海岸假日酒店(西霞口动物园店)", "star": 4, "score": 4.3, "label": "", "reviews": "187", "price": 314, "room": "园景大床房（榻榻米+全屋智能+零压床垫）", "park": "距成山头风景名胜区驾车3公里 · 近成山头风景名胜区", "rank": 96}, {"key": "n4:海咕咕半山半海民宿(成山头店)", "night": "n4", "name": "海咕咕半山半海民宿(成山头店)", "star": 2, "score": 4.5, "label": "很好", "reviews": "67", "price": 228, "room": "观汐观松(一线海景房+专属露台）", "park": "距成山头风景名胜区步行1.8公里 · 近成山头风景名胜区", "rank": 97}, {"key": "n4:荣成三面海精品酒店", "night": "n4", "name": "荣成三面海精品酒店", "star": 2, "score": 4.7, "label": "超棒", "reviews": "52", "price": 176, "room": "豪华大床房（智能马桶+零压床垫）", "park": "距成山头风景名胜区步行980米 · 近成山头风景名胜区", "rank": 98}, {"key": "n4:荣成成山头西霞口动物园丽呈睿轩酒店", "night": "n4", "name": "荣成成山头西霞口动物园丽呈睿轩酒店", "star": 3, "score": 4.5, "label": "很好", "reviews": "262", "price": 188, "room": "看浪花花海景大床房（全日观海+零压床垫）", "park": "距成山头风景名胜区驾车5.3公里 · 近西霞口神雕山野生动物园", "rank": 99}, {"key": "n4:荣成海滨之家瞰海精品酒店", "night": "n4", "name": "荣成海滨之家瞰海精品酒店", "star": 2, "score": 4.4, "label": "", "reviews": "283", "price": 143, "room": "伴星·海景大床房", "park": "距成山头风景名胜区驾车3.9公里 · 近成山头风景名胜区", "rank": 100}, {"key": "n4:荣成龙源海怡国际酒店(海滨公园店)", "night": "n4", "name": "荣成龙源海怡国际酒店(海滨公园店)", "star": 5, "score": 4.8, "label": "", "reviews": "", "price": 378, "rank": 126, "id": 110387023, "room": "1.8 米大床", "size": "35 ㎡", "sizeNum": 35, "priceNote": "含 2 早 ¥378；33 ㎡ ¥358", "park": "荣成市区樱花湖，免费停车；距成山头 40 km", "review": "评分最高的 5 钻，看日出要 4 点出门"}, {"key": "n4:如家酒店·neo(威海荣成观海西路高铁站店)", "night": "n4", "name": "如家酒店·neo(威海荣成观海西路高铁站店)", "id": 127884619, "star": 2, "score": 4.7, "label": "超棒", "reviews": "440", "price": 137, "room": "", "park": "近樱花湖体育公园 · 大润发(荣成店)", "rank": 138}, {"key": "n4:威海荣成玥儿湾酒店(樱花湖店)", "night": "n4", "name": "威海荣成玥儿湾酒店(樱花湖店)", "id": 123781458, "star": 5, "score": 4.6, "label": "很好", "reviews": "1716", "price": 407, "room": "", "park": "近樱花湖 · 荣武基地海水浴场", "rank": 139}, {"key": "n4:荣成希尔顿欢朋酒店", "night": "n4", "name": "荣成希尔顿欢朋酒店", "id": 112875401, "star": 4, "score": 4.8, "label": "超棒", "reviews": "3854", "price": 348, "room": "", "park": "市中心/樱花湖体育公园 · 近渔礼威海特产零食集合店", "rank": 140}, {"key": "n4:荣成华星宾馆", "night": "n4", "name": "荣成华星宾馆", "id": 1713356, "star": 4, "score": 4.7, "label": "超棒", "reviews": "1773", "price": 499, "room": "", "park": "近北斗山庄 · 樱花湖", "rank": 141}, {"key": "n4:汉庭酒店(威海荣成石岛店)", "night": "n4", "name": "汉庭酒店(威海荣成石岛店)", "id": 134345163, "star": 2, "score": 4.9, "label": "超棒", "reviews": "41", "price": 205, "room": "", "park": "近凤凰湖公园 · 赤山风景区", "rank": 142}, {"key": "n4:VELAN·蔚蓝·果冻海酒店(布鲁威斯号沉船店)", "night": "n4", "name": "VELAN·蔚蓝·果冻海酒店(布鲁威斯号沉船店)", "id": 132403840, "star": 4, "score": 4.4, "label": "", "reviews": "310", "price": 397, "room": "", "park": "近搁浅货轮布鲁维斯号 · 布鲁维斯海滩", "rank": 143}, {"key": "n4:九龙晟大酒店(海滨公园店)", "night": "n4", "name": "九龙晟大酒店(海滨公园店)", "id": 2256483, "star": 4, "score": 4.7, "label": "超棒", "reviews": "1386", "price": 273, "room": "", "park": "近樱花湖 · 荣成九龙城休闲购物广场", "rank": 144}, {"key": "n4:MORANBROOK莫兰布鲁克度假酒店(威海荣成高铁站店)", "night": "n4", "name": "MORANBROOK莫兰布鲁克度假酒店(威海荣成高铁站店)", "id": 135379639, "star": 4, "score": 5.0, "label": "超棒", "reviews": "8", "price": 201, "room": "", "park": "近荣成站 · 浦林成山", "rank": 145}, {"key": "n4:荣成倪氏海泰度假酒店(樱花湖店)", "night": "n4", "name": "荣成倪氏海泰度假酒店(樱花湖店)", "id": 2140639, "star": 5, "score": 4.0, "label": "", "reviews": "2590", "price": 304, "room": "", "park": "近樱花湖 · 滨海公园", "rank": 146}, {"key": "n5:威海九紫黄龙璀丽酒店(威海高铁站韩乐坊店)", "night": "n5", "name": "威海九紫黄龙璀丽酒店(威海高铁站韩乐坊店)", "star": 5, "score": 4.7, "label": "", "reviews": "", "price": 366, "rank": 127, "id": 123793074, "room": "1.8 米大床（4–10 层）", "size": "36 ㎡", "sizeNum": 36, "priceNote": "¥366 无早 / ¥386 含早；高层 ¥444", "park": "大庆路 47-19 号，韩乐坊旁，免费停车，近 G18", "review": "宋式主题，性价比高", "pick": true}, {"key": "n5:威海幸福门威高广场桔子水晶酒店", "night": "n5", "name": "威海幸福门威高广场桔子水晶酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "721", "price": 441, "room": "2 米特大床（8–16 层）", "park": "人防路 4 号，免费停车", "rank": 101, "id": 128849524, "size": "33 ㎡", "sizeNum": 33, "priceNote": "¥441 无早 / ¥495 含早", "review": "落地窗、新"}, {"key": "n5:威海市区幸福门亚朵酒店", "night": "n5", "name": "威海市区幸福门亚朵酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "933", "price": 491, "room": "2 米特大床", "park": "世昌大道海裕城 A 座，免费停车，幸福门步行 620 m", "rank": 102, "id": 130896497, "size": "33–38 ㎡", "sizeNum": 33, "priceNote": "¥491 无早；高层 ¥552", "review": "\"周边餐饮购物齐全\""}, {"key": "n5:威海百纳瑞汀酒店(刘公岛幸福门店)", "night": "n5", "name": "威海百纳瑞汀酒店(刘公岛幸福门店)", "star": 4, "score": 4.7, "label": "超棒", "reviews": "6,585", "price": 313, "room": "1.8 米大床（11 层）", "park": "新威路 58 号，市中心", "rank": 103, "id": 454752, "size": "30 ㎡", "sizeNum": 30, "priceNote": "¥313 无早；20 ㎡ 迷你大床含早 ¥270", "review": "点评最多，房型偏小"}, {"key": "n5:全季酒店(威海市中心威高广场店)", "night": "n5", "name": "全季酒店(威海市中心威高广场店)", "star": 3, "score": 4.5, "label": "很好", "reviews": "1,565", "price": 272, "room": "高级大床房（舒适好眠零压床垫+天竺葵精油洗护）", "park": "距威海幸福门步行1.8公里 · 近威高广场步行街", "rank": 104}, {"key": "n5:维也纳智好酒店(威海威高广场幸福门店)", "night": "n5", "name": "维也纳智好酒店(威海威高广场幸福门店)", "star": 3, "score": 4.4, "label": "", "reviews": "1,246", "price": 154, "room": "高级大床房", "park": "距威海幸福门步行580米 · 近威海幸福门", "rank": 105}, {"key": "n5:桔子酒店(威海威高广场幸福门店)", "night": "n5", "name": "桔子酒店(威海威高广场幸福门店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "626", "price": 447, "room": "高级大床房（智能客控+小冰箱+65寸电视投屏）", "park": "距威海幸福门步行520米 · 近威高广场步行街", "rank": 106}, {"key": "n5:宜必思酒店(威海威高广场幸福门店)", "night": "n5", "name": "宜必思酒店(威海威高广场幸福门店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "528", "price": 204, "room": "大床房(深睡系列+智能客控+智能马桶+小冰箱)", "park": "距威海幸福门步行820米 · 近威高广场步行街", "rank": 107}, {"key": "n5:锦江都城酒店(威海刘公岛幸福门店)", "night": "n5", "name": "锦江都城酒店(威海刘公岛幸福门店)", "star": 4, "score": 4.7, "label": "超棒", "reviews": "98", "price": 280, "room": "高级大床房（65寸电视投屏+迷你水吧+深睡床垫）", "park": "距威海幸福门步行830米 · 近威高广场步行街", "rank": 108}, {"key": "n5:威海幸福门威高广场漫心酒店", "night": "n5", "name": "威海幸福门威高广场漫心酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "1,053", "price": 384, "room": "心怡标准大床房（小冰箱&65寸投屏电视&丝涟床垫）", "park": "距威海幸福门步行960米 · 近威高广场步行街", "rank": 109}, {"key": "n5:威海市区威高广场亚朵酒店", "night": "n5", "name": "威海市区威高广场亚朵酒店", "star": 4, "score": 4.7, "label": "超棒", "reviews": "1,067", "price": 385, "room": "高级大床房（全屋智能+65寸电视投屏+深睡体验）", "park": "距威海幸福门步行1.6公里 · 近威高广场步行街", "rank": 110, "id": 535463}, {"key": "n5:威海幸福门威高广场海景美仑酒店", "night": "n5", "name": "威海幸福门威高广场海景美仑酒店", "star": 4, "score": 4.6, "label": "很好", "reviews": "1,107", "price": 389, "room": "舒适大床房（65英寸投屏电视+小冰箱+智能马桶）", "park": "距威海幸福门步行840米 · 近刘公岛景区", "rank": 111}, {"key": "n5:威海希尔维亚酒店", "night": "n5", "name": "威海希尔维亚酒店", "star": 4, "score": 4.6, "label": "很好", "reviews": "5,101", "price": 288, "room": "豪华商务大床房", "park": "距韩乐坊步行440米 · 近韩乐坊", "rank": 112, "id": 26482576}, {"key": "n5:如家·neo(威海高铁站韩乐坊店)", "night": "n5", "name": "如家·neo(威海高铁站韩乐坊店)", "star": 2, "score": 4.8, "label": "超棒", "reviews": "83", "price": 196, "room": "高级双床房", "park": "距韩乐坊步行120米 · 近韩乐坊", "rank": 113}, {"key": "n5:全季酒店(威海站韩乐坊店)", "night": "n5", "name": "全季酒店(威海站韩乐坊店)", "star": 3, "score": 4.8, "label": "超棒", "reviews": "189", "price": 371, "room": "大床房（幽窗闲居-智能客控-舒压安睡）", "park": "距韩乐坊驾车2公里 · 近韩乐坊", "rank": 114}, {"key": "n5:威海高铁站韩乐坊不夜城亚朵酒店", "night": "n5", "name": "威海高铁站韩乐坊不夜城亚朵酒店", "star": 4, "score": 4.8, "label": "超棒", "reviews": "552", "price": 458, "room": "高级大床房（全屋智能+65寸电视投屏）", "park": "距韩乐坊步行1.8公里 · 近韩乐坊", "rank": 115}, {"key": "n5:半岛菲诺国际酒店(威海高铁站韩乐坊店)", "night": "n5", "name": "半岛菲诺国际酒店(威海高铁站韩乐坊店)", "star": 4, "score": 4.6, "label": "很好", "reviews": "3,607", "price": 298, "room": "菲诺体验双床房", "park": "距韩乐坊步行180米 · 近韩乐坊", "rank": 116}, {"key": "n5:威海春竹国际大酒店(高铁站韩乐坊店)", "night": "n5", "name": "威海春竹国际大酒店(高铁站韩乐坊店)", "star": 5, "score": 4.6, "label": "很好", "reviews": "2,031", "price": 374, "room": "高级双床房（落地窗+电动窗帘+电视投屏）", "park": "距韩乐坊步行450米 · 近韩乐坊", "rank": 117, "id": 48582917}, {"key": "n5:铂漫瑞斯酒店(威海高铁站韩乐坊店)", "night": "n5", "name": "铂漫瑞斯酒店(威海高铁站韩乐坊店)", "star": 3, "score": 4.7, "label": "超棒", "reviews": "2,938", "price": 250, "room": "憩泊·商务大床房（MINI冰箱+投屏电视+轻智能马桶）", "park": "距韩乐坊步行750米 · 近韩乐坊", "rank": 118}, {"key": "n5:威海火车站韩乐坊美仑酒店", "night": "n5", "name": "威海火车站韩乐坊美仑酒店", "star": 4, "score": 4.7, "label": "超棒", "reviews": "1,120", "price": 265, "room": "高级大床房（投屏电视+小冰箱）", "park": "距韩乐坊步行810米 · 近韩国风情街", "rank": 119}, {"key": "n5:凯莱•Central•酒店(威海高铁站韩乐坊店)", "night": "n5", "name": "凯莱•Central•酒店(威海高铁站韩乐坊店)", "star": 2, "score": 4.7, "label": "超棒", "reviews": "211", "price": 194, "room": "畅享丨阳光大床房", "park": "距韩乐坊步行200米 · 近韩乐坊", "rank": 120}, {"key": "n5:格林豪泰酒店(威海高铁总站韩乐坊店)", "night": "n5", "name": "格林豪泰酒店(威海高铁总站韩乐坊店)", "star": 2, "score": 4.4, "label": "", "reviews": "367", "price": 118, "room": "大床房", "park": "距韩乐坊步行410米 · 近韩乐坊", "rank": 121}];
+const tabs=document.getElementById('hotelTabs');const list=document.getElementById('hotelList');
+let curNight='n1';const chosen=JSON.parse(store.get('qd_hotel_choice')||'{}');
+nights.forEach(nt=>{const b=document.createElement('button');b.textContent=nt.label;b.setAttribute('role','tab');b.setAttribute('aria-selected',nt.key===curNight);b.onclick=()=>{curNight=nt.key;tabs.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',x===b));renderHotels()};tabs.appendChild(b)});
+function ctripUrl(h){const nt=nights.find(n=>n.key===h.night);return h.id?'https://hotels.ctrip.com/hotels/detail/?hotelId='+h.id+'&checkIn='+nt.ci+'&checkOut='+nt.co+'&cityId='+nt.city+'&crn=1&adult=2&children=0':'https://hotels.ctrip.com/hotels/list?cityId='+nt.city+'&checkin='+nt.ci+'&checkout='+nt.co+'&crn=1&countryId=1&searchWord='+encodeURIComponent(h.name)+'&searchType=CT&directSearch=1&old=1'}
+function renderHotels(){list.innerHTML='';const nt=nights.find(n=>n.key===curNight);const fStar=document.getElementById('fStar').checked,fSize=document.getElementById('fSize').checked,fScore=document.getElementById('fScore').checked,sort=document.getElementById('fSort').value;let hs=hotels.filter(h=>h.night===curNight);if(fStar)hs=hs.filter(h=>(h.star||0)>=4);if(fSize)hs=hs.filter(h=>!h.sizeNum||h.sizeNum>=30);if(fScore)hs=hs.filter(h=>!h.score||h.score>=4.5);hs=hs.slice().sort((a,b)=>sort==='price'?a.price-b.price:sort==='score'?(b.score||0)-(a.score||0):sort==='star'?(b.star||0)-(a.star||0)||(b.score||0)-(a.score||0):(b.pick?1:0)-(a.pick?1:0)||(a.rank||99)-(b.rank||99));document.getElementById('hCount').textContent=hs.length+' 家';hs.forEach(h=>{const d=document.createElement('div');d.className='hotel'+(chosen[curNight]===h.key?' sel':'');const star=h.star?'<span class="star" title="携程 '+h.star+' 钻">'+'◆'.repeat(h.star)+'</span> '+h.star+' 钻':'<span class="muted">钻级未标</span>';d.innerHTML='<div class="nm"><a target="_blank" rel="noreferrer" href="'+ctripUrl(h)+'">'+h.name+'</a>'+(h.pick?' <span class="badge ok">首选</span>':'')+'</div><div class="price">¥'+h.price+'<small>/晚起'+(nt.n>1?' × '+nt.n+' 晚':'')+'</small></div><div>'+star+(h.score?' · <span class="score">评分 <b>'+h.score+'</b> '+(h.label||'')+' '+(h.reviews?h.reviews+' 评':'')+'</span>':'')+'</div><div><b>'+(h.room||'房型待核')+'</b>'+(h.size?' · '+h.size:'')+(h.priceNote?'<br><small class="muted">'+h.priceNote+'</small>':'')+'</div><div class="meta">'+(h.park||'')+(h.review?'<br>'+h.review:'')+'</div><label><input type="radio" name="pick_'+curNight+'" '+(chosen[curNight]===h.key?'checked':'')+'> 选这家计入预算</label>';d.querySelector('input').onchange=()=>{chosen[curNight]=h.key;store.set('qd_hotel_choice',JSON.stringify(chosen));renderHotels();budget()};list.appendChild(d)})}
+nights.forEach(nt=>{if(!chosen[nt.key]){const p=hotels.find(h=>h.night===nt.key&&h.pick);if(p)chosen[nt.key]=p.key}});
+['fStar','fSize','fScore','fSort'].forEach(id=>document.getElementById(id).addEventListener('change',renderHotels));
+renderHotels();
+
+// ---------- budget ----------
+function num(id){return Number(document.getElementById(id).value)||0}
+function hotelSum(){let s=0;nights.forEach(nt=>{const h=hotels.find(x=>x.key===chosen[nt.key]);if(h)s+=h.price*nt.n});return s}
+function budget(){const hs=hotelSum();document.getElementById('bHotel').textContent=hs;let t=num('bToll1')+num('bToll2')+num('bToll3')+num('bToll4')+num('bToll5')+num('bSwapN')*num('bSwapP')+num('bFood')*2*6+num('bTicket')+num('bMisc')+hs;if(document.getElementById('bLgd').checked)t+=244;if(document.getElementById('bJmd').checked)t+=240;if(document.getElementById('bBeer').checked)t+=120;document.getElementById('bTotal').textContent=t.toLocaleString('zh-CN')}
+document.querySelectorAll('#tools input').forEach(i=>i.addEventListener('input',budget));budget();
+
+// ---------- planner ----------
+const plans={
+ go:{name:'去程 歙县→日照',segs:[['歙县王村镇出发',0,'满电出发，G56 → G4012'],['前宋服务区（G4012，溧阳）',240,'换电①，上厕所'],['江都服务区（G2）',390,'换电②必须换满，此后 345 km 无高速换电站'],['王兴/蒋庵服务区（G25，淮安）',520,'不换电，困了就停 20 分钟'],['赣马服务区（G15，赣榆）',650,'进山东前休息'],['日照服务区（G15，岚山）',735,'换电③'],['万平口酒店',770,'凌晨到店，睡到中午']],swaps:[1,2,5]},
+ back:{name:'返程 威海→歙县',segs:[['威海市区出发',0,'退房后 12:00 出发'],['海阳服务区（G1813）',130,'换电①'],['日照服务区（G15）',440,'换电②，晚餐'],['王兴/蒋庵服务区（G25）',650,'休息'],['江都服务区（G2）',785,'换电③；排队则 20 km 后郭村（S28）'],['前宋服务区（G4012）',935,'换电④'],['歙县王村镇到家',1113,'10/1 零点后驶出即免费']],swaps:[1,2,4,5]},
+ rq:{name:'日照→青岛',segs:[['东夷小镇出发',0,'吃完晚饭'],['胶南服务区（G15）',95,'可不停'],['胶州湾大桥',125,'¥30'],['崂山区石老人酒店',150,'']],swaps:[]},
+ qw:{name:'青岛→威海 海岸线',segs:[['崂山仰口出发',0,'12:00 左右'],['鳌山湾 / 王哥庄',30,'午餐'],['海阳万米海滩',131,'停 40 分钟'],['乳山银滩 大拇指广场',197,'看日落 17:49，停 60 分钟'],['威海国际海水浴场酒店',295,'晚餐']],swaps:[]}
+};
+function fmt(d){return d.toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false})}
+function plan(){const p=plans[document.getElementById('planLeg').value];const start=new Date(document.getElementById('planStart').value);const swap=num('planSwap');const speed=num('planSpeed')||90;const tb=document.querySelector('#planTable tbody');tb.innerHTML='';let t=new Date(start),prev=0,total=0;p.segs.forEach((s,i)=>{const dist=s[1]-prev;t=new Date(t.getTime()+dist/speed*36e5);prev=s[1];if(i>0){const m=parseInt((p.segs[i-1][2].match(/停 ?(\d+)/)||[0,0])[1]);if(m)t=new Date(t.getTime()+m*6e4)}const tr=document.createElement('tr');tr.innerHTML='<td>'+s[0]+'</td><td>'+s[1]+' km</td><td><b>'+fmt(t)+'</b></td><td>'+s[2]+'</td>';tb.appendChild(tr);if(p.swaps.includes(i)){t=new Date(t.getTime()+swap*6e4);total+=swap}});const note=document.getElementById('planNote');const hrs=((t-start)/36e5).toFixed(1);let txt=p.name+'：预计 '+fmt(t)+' 到达，总耗时约 '+hrs+' 小时（含 '+p.swaps.length+' 次换电 '+total+' 分钟）。';if(p===plans.back){txt+= t>=new Date('2026-10-01T00:00:00+08:00')?' 到家在 10/1 零点之后，高速免费。':' 到家在 10/1 零点之前，会收过路费约 ¥544；晚点出发或在最后一个服务区多歇一会。'}if(p===plans.go){txt+=' 江都→日照 345 km 是全程最长无换电段，江都务必换满。'}note.textContent=txt}
+document.getElementById('planLeg').addEventListener('change',()=>{const v=document.getElementById('planLeg').value;document.getElementById('planStart').value={go:'2026-09-24T19:00',back:'2026-09-30T12:00',rq:'2026-09-25T20:30',qw:'2026-09-27T12:00'}[v];plan()});
+['planStart','planSwap','planSpeed'].forEach(id=>document.getElementById(id).addEventListener('input',plan));plan();
+
+// ---------- checklists ----------
+function checklist(id,key,items){const ul=document.getElementById(id);const st=JSON.parse(store.get(key)||'null')||items.map(t=>({t,d:false}));function save(){store.set(key,JSON.stringify(st))}function render(){ul.innerHTML='';st.forEach(it=>{const li=document.createElement('li');li.className=it.d?'done':'';li.innerHTML='<input type="checkbox" '+(it.d?'checked':'')+'><span>'+it.t+'</span>';li.querySelector('input').onchange=e=>{it.d=e.target.checked;save();render()};ul.appendChild(li)})}render();return{add(t){st.push({t,d:false});save();render()},reset(){store.del(key);location.reload()}}}
+checklist('todoList','qd_todo',[
+ '9/10–9/15 · 携程锁定可免费取消的 6 晚房型（日照 9/24、青岛 9/25–27、威海 9/27、荣成 9/28、威海 9/29）',
+ '9/15 · 蔚来 App 加电地图核对前宋、江都、日照、海阳服务区换电站营业与电池数',
+ '9/20 前 · 崂山风景区公众号预约 9/27 仰口门票；成山头"西霞口旅游"公众号预约 9/29',
+ '9/22 08:00 · 抢崂山环海公路 9/27 车辆预约（提前 5 天放号，600 台）',
+ '9/22 · 看蔚来中秋 / 国庆高速换电政策公告；看崂山、青岛交警、日照文旅假期公告',
+ '9/23 · 日照酒店电话备注凌晨 3–4 点到店；青岛酒店备注 23:00 后到店',
+ '9/24 出发前 · 满电、胎压、ETC、身份证、充电线、保温杯、薄外套、防晒、赶海鞋',
+ '9/26 · 预约小鱼山（魅力海滨公众号）、信号山；如去啤酒博物馆实名预约',
+ '9/28 · 查荣成天气决定 9/29 是否看日出；刘公岛或鸡鸣岛二选一',
+ '9/30 · 12:00 前出发；到家前看 10/1 零点后再驶出高速'
+]);
+const pack=checklist('packList','qd_pack',['身份证、驾驶证、行驶证','ETC / 车钥匙 / 蔚来 App 登录','手机支架、车充、充电宝','薄外套 / 防晒衣 / 帽子 / 墨镜','防晒霜、驱蚊液','泳衣（可选）、赶海防滑鞋、小桶小铲','保温杯、路上零食、湿巾','常用药：晕车、肠胃、创可贴','相机 / 三脚架（成山头日出）','洗漱包、换洗衣物 6 天']);
+document.getElementById('packAdd').onclick=()=>{const t=prompt('要带什么？');if(t)pack.add(t)};
+document.getElementById('packReset').onclick=()=>{if(confirm('重置打包清单？'))pack.reset()};
+})();
+</script>
+</body>
+</html>

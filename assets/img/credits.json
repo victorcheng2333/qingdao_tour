@@ -1,0 +1,156 @@
+{
+ "rizhao-lighthouse": {
+  "name": "日照灯塔",
+  "file": "assets/img/rizhao-lighthouse.jpg",
+  "title": "File:Lighthouse Scenic of Rizhao.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "风之清扬",
+  "page": "https://commons.wikimedia.org/wiki/File:Lighthouse_Scenic_of_Rizhao.jpg",
+  "w": 2592,
+  "h": 1944,
+  "bytes": 183854
+ },
+ "rizhao-wanpingkou": {
+  "name": "万平口",
+  "file": "assets/img/rizhao-wanpingkou.jpg",
+  "title": "File:日照市万平口海洋公园2022.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Iswzo",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%97%A5%E7%85%A7%E5%B8%82%E4%B8%87%E5%B9%B3%E5%8F%A3%E6%B5%B7%E6%B4%8B%E5%85%AC%E5%9B%AD2022.jpg",
+  "w": 5472,
+  "h": 3648,
+  "bytes": 147229
+ },
+ "rizhao-forest": {
+  "name": "日照海滨国家森林公园",
+  "file": "assets/img/rizhao-forest.jpg",
+  "title": "File:Rizhao Seaside National Forest Park - panoramio.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "Jd Shi",
+  "page": "https://commons.wikimedia.org/wiki/File:Rizhao_Seaside_National_Forest_Park_-_panoramio.jpg",
+  "w": 1280,
+  "h": 960,
+  "bytes": 506836
+ },
+ "qingdao-zhanqiao": {
+  "name": "青岛栈桥",
+  "file": "assets/img/qingdao-zhanqiao.jpg",
+  "title": "File:Zhanqiao pier with Little Qingdao Isle.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "K.Y.K.Z.K.",
+  "page": "https://commons.wikimedia.org/wiki/File:Zhanqiao_pier_with_Little_Qingdao_Isle.jpg",
+  "w": 4000,
+  "h": 3000,
+  "bytes": 271338
+ },
+ "qingdao-badaguan": {
+  "name": "八大关",
+  "file": "assets/img/qingdao-badaguan.jpg",
+  "title": "File:青岛八大关花石楼.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "Gisling",
+  "page": "https://commons.wikimedia.org/wiki/File:%E9%9D%92%E5%B2%9B%E5%85%AB%E5%A4%A7%E5%85%B3%E8%8A%B1%E7%9F%B3%E6%A5%BC.jpg",
+  "w": 3180,
+  "h": 2156,
+  "bytes": 333286
+ },
+ "qingdao-cathedral": {
+  "name": "浙江路天主教堂",
+  "file": "assets/img/qingdao-cathedral.jpg",
+  "title": "File:20240730 St. Michael's Cathedral, Qingdao 01.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Windmemories",
+  "page": "https://commons.wikimedia.org/wiki/File:20240730_St._Michael%27s_Cathedral,_Qingdao_01.jpg",
+  "w": 1800,
+  "h": 1199,
+  "bytes": 383513
+ },
+ "qingdao-wusi": {
+  "name": "五四广场",
+  "file": "assets/img/qingdao-wusi.jpg",
+  "title": "File:51361-Qingdao May Fourth Square.jpg",
+  "license": "CC BY 2.0",
+  "artist": "xiquinhosilva",
+  "page": "https://commons.wikimedia.org/wiki/File:51361-Qingdao_May_Fourth_Square.jpg",
+  "w": 3000,
+  "h": 2000,
+  "bytes": 276401
+ },
+ "qingdao-laoshan": {
+  "name": "崂山",
+  "file": "assets/img/qingdao-laoshan.jpg",
+  "title": "File:DSC 6740 (10596457806).jpg",
+  "license": "CC BY-SA 2.0",
+  "artist": "Ludger Heide",
+  "page": "https://commons.wikimedia.org/wiki/File:DSC_6740_(10596457806).jpg",
+  "w": 4288,
+  "h": 2848,
+  "bytes": 181011
+ },
+ "qingdao-beer": {
+  "name": "青岛啤酒博物馆",
+  "file": "assets/img/qingdao-beer.jpg",
+  "title": "File:Tsingdao Brewery.jpg",
+  "license": "CC BY-SA 2.5",
+  "artist": "M. Weitzel",
+  "page": "https://commons.wikimedia.org/wiki/File:Tsingdao_Brewery.jpg",
+  "w": 2048,
+  "h": 1536,
+  "bytes": 327332
+ },
+ "weihai-chengshantou": {
+  "name": "成山头",
+  "file": "assets/img/weihai-chengshantou.jpg",
+  "title": "File:成山头 - panoramio (1).jpg",
+  "license": "CC BY 3.0",
+  "artist": "guan",
+  "page": "https://commons.wikimedia.org/wiki/File:%E6%88%90%E5%B1%B1%E5%A4%B4_-_panoramio_(1).jpg",
+  "w": 4608,
+  "h": 3072,
+  "bytes": 222844
+ },
+ "weihai-liugongdao": {
+  "name": "刘公岛",
+  "file": "assets/img/weihai-liugongdao.jpg",
+  "title": "File:环翠 刘公岛风景名胜区.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Liuxingy",
+  "page": "https://commons.wikimedia.org/wiki/File:%E7%8E%AF%E7%BF%A0_%E5%88%98%E5%85%AC%E5%B2%9B%E9%A3%8E%E6%99%AF%E5%90%8D%E8%83%9C%E5%8C%BA.jpg",
+  "w": 10240,
+  "h": 5120,
+  "bytes": 208618
+ },
+ "weihai-huanhai": {
+  "name": "威海环海路",
+  "file": "assets/img/weihai-huanhai.jpg",
+  "title": "File:山东 威海 -北环海路-日出 - panoramio.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "Nyx Ning",
+  "page": "https://commons.wikimedia.org/wiki/File:%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-%E5%8C%97%E7%8E%AF%E6%B5%B7%E8%B7%AF-%E6%97%A5%E5%87%BA_-_panoramio.jpg",
+  "w": 4352,
+  "h": 2448,
+  "bytes": 161099
+ },
+ "weihai-naxianghai": {
+  "name": "那香海",
+  "file": "assets/img/weihai-naxianghai.jpg",
+  "title": "File:Naxianghai in Weihai 20180711.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "Sunyiming",
+  "page": "https://commons.wikimedia.org/wiki/File:Naxianghai_in_Weihai_20180711.jpg",
+  "w": 4608,
+  "h": 2592,
+  "bytes": 180446
+ },
+ "weihai-xingfumen": {
+  "name": "幸福门",
+  "file": "assets/img/weihai-xingfumen.jpg",
+  "title": "File:Gate of happiness 山东 威海 - panoramio.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "Nyx Ning",
+  "page": "https://commons.wikimedia.org/wiki/File:Gate_of_happiness_%E5%B1%B1%E4%B8%9C_%E5%A8%81%E6%B5%B7_-_panoramio.jpg",
+  "w": 4244,
+  "h": 2386,
+  "bytes": 185159
+ }
+}
