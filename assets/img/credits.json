@@ -152,5 +152,77 @@
   "w": 4244,
   "h": 2386,
   "bytes": 185159
+ },
+ "xhs-rizhao-sunshine": {
+  "name": "阳光海岸绿道 · 太公岛",
+  "file": "assets/img/xhs-rizhao-sunshine.jpg",
+  "source": "xiaohongshu",
+  "author": "四季旅行",
+  "note": "https://www.xiaohongshu.com/explore/69cb2eef000000001a026af6",
+  "title": "日照的浪漫，love海 占一半",
+  "license": "版权归原作者，仅作个人行前参考"
+ },
+ "xhs-rizhao-dongyi": {
+  "name": "东夷小镇",
+  "file": "assets/img/xhs-rizhao-dongyi.jpg",
+  "source": "xiaohongshu",
+  "author": "白桦林",
+  "note": "https://www.xiaohongshu.com/explore/68dfc7a9000000000703a277",
+  "title": "到日照必去景点—东夷小镇",
+  "license": "版权归原作者，仅作个人行前参考"
+ },
+ "xhs-rizhao-renjiatai": {
+  "name": "任家台礁石公园 · 大泉沟渔港",
+  "file": "assets/img/xhs-rizhao-renjiatai.jpg",
+  "source": "xiaohongshu",
+  "author": "拉法的流浪日记",
+  "note": "https://www.xiaohongshu.com/explore/6961af82000000000903bcf5",
+  "title": "我发现了日照的唯一一个渔村景区",
+  "license": "版权归原作者，仅作个人行前参考"
+ },
+ "xhs-qingdao-xiaomaidao": {
+  "name": "小麦岛 · 石老人海水浴场",
+  "file": "assets/img/xhs-qingdao-xiaomaidao.jpg",
+  "source": "xiaohongshu",
+  "author": "格格",
+  "note": "https://www.xiaohongshu.com/explore/6a9ff808000000001202758d",
+  "title": "落日余晖下的青岛小麦岛",
+  "license": "版权归原作者，仅作个人行前参考"
+ },
+ "xhs-weihai-haiyuan": {
+  "name": "海源公园 · 三连岛",
+  "file": "assets/img/xhs-weihai-haiyuan.jpg",
+  "source": "xiaohongshu",
+  "author": "四季旅行",
+  "note": "https://www.xiaohongshu.com/explore/6a7ebf7b0000000006005baa",
+  "title": "威海去了8个地方，这3个最让人难忘",
+  "license": "版权归原作者，仅作个人行前参考"
+ },
+ "xhs-weihai-huoju": {
+  "name": "火炬八街 · 国际海水浴场",
+  "file": "assets/img/xhs-weihai-huoju.jpg",
+  "source": "xiaohongshu",
+  "author": "阿康爱旅行",
+  "note": "https://www.xiaohongshu.com/explore/6a72a17c0000000032031944",
+  "title": "威海火炬八街｜路的尽头是海",
+  "license": "版权归原作者，仅作个人行前参考"
+ },
+ "xhs-weihai-bruweis": {
+  "name": "布鲁威斯号搁浅船",
+  "file": "assets/img/xhs-weihai-bruweis.jpg",
+  "source": "xiaohongshu",
+  "author": "He.",
+  "note": "https://www.xiaohongshu.com/explore/6a2bd3580000000015024758",
+  "title": "威海｜布鲁维斯号｜宿命感",
+  "license": "版权归原作者，仅作个人行前参考"
+ },
+ "xhs-weihai-seaweed": {
+  "name": "烟墩角海草房 · 彩虹公路",
+  "file": "assets/img/xhs-weihai-seaweed.jpg",
+  "source": "xiaohongshu",
+  "author": "晴天_TT",
+  "note": "https://www.xiaohongshu.com/explore/6a3bb6f2000000001603ee7b",
+  "title": "烟墩角 海草房 闯进宫崎骏的夏天",
+  "license": "版权归原作者，仅作个人行前参考"
  }
 }
